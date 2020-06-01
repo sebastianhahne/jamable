@@ -1,0 +1,2 @@
+class TaggedUser < ApplicationRecord
+end
