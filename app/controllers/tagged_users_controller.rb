@@ -1,0 +1,2 @@
+class TaggedUsersController < ApplicationController
+end
