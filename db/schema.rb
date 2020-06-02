@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_01_131610) do
+ActiveRecord::Schema.define(version: 2020_06_02_122652) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,16 @@ ActiveRecord::Schema.define(version: 2020_06_01_131610) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "friendships", force: :cascade do |t|
+    t.bigint "asker_id"
+    t.bigint "receiver_id"
+    t.string "status", default: "Pending"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["asker_id"], name: "index_friendships_on_asker_id"
+    t.index ["receiver_id"], name: "index_friendships_on_receiver_id"
   end
 
   create_table "instruments", force: :cascade do |t|
@@ -42,16 +52,18 @@ ActiveRecord::Schema.define(version: 2020_06_01_131610) do
     t.string "mediafiles"
     t.string "caption"
     t.bigint "user_id", null: false
-    t.bigint "tagged_user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["tagged_user_id"], name: "index_posts_on_tagged_user_id"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
   create_table "tagged_users", force: :cascade do |t|
+    t.bigint "post_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["post_id"], name: "index_tagged_users_on_post_id"
+    t.index ["user_id"], name: "index_tagged_users_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -72,9 +84,12 @@ ActiveRecord::Schema.define(version: 2020_06_01_131610) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "friendships", "users", column: "asker_id"
+  add_foreign_key "friendships", "users", column: "receiver_id"
   add_foreign_key "messages", "chatrooms"
   add_foreign_key "messages", "users"
-  add_foreign_key "posts", "tagged_users"
   add_foreign_key "posts", "users"
+  add_foreign_key "tagged_users", "posts"
+  add_foreign_key "tagged_users", "users"
   add_foreign_key "users", "instruments"
 end
