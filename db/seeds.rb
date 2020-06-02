@@ -1,7 +1,33 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+require 'open-uri'
+
+# destroying old database
+puts 'Burning down old database...'
+puts 'Killing all the users...'
+User.destroy_all
+# puts 'Kurt cobaining all the instruments...'
+# Instrument.destroy_all
+
+# Creating 5 users
+puts 'Cloning users'
+
+  email = 'sebastian.remm@jamable.com'
+  pw = '123456'
+  username = 'Sebi'
+  new_user = User.create!(email: email, password: pw, password_confirmation: pw, username: username)
+
+  email = 'sebastian.hahne@jamable.com'
+  pw = '123456'
+  username = 'Basti'
+  new_user = User.create!(email: email, password: pw, password_confirmation: pw, username: username)
+
+  email = 'moritz.kork@jamable.com'
+  pw = '123456'
+  username = 'Moe'
+  new_user = User.create!(email: email, password: pw, password_confirmation: pw, username: username)
+
+  email = 'benj.riethmuller@jamable.com'
+  pw = '123456'
+  username = 'Benj'
+  new_user = User.create!(email: email, password: pw, password_confirmation: pw, username: username)
+
+puts 'Done'
