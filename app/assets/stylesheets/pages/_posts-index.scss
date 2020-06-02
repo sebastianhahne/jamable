@@ -1,0 +1,36 @@
+.feed-wrapper {
+  width: 90vw;
+  margin: auto;
+}
+
+.post-header {
+  display: flex;
+  height: 32px;
+  border: black 1px solid;
+  border-radius: 8px 8px 0px 0px;
+  position: relative;
+}
+
+.user-image {
+  position: absolute;
+  left: 4px;
+  top: 4px;
+}
+
+.post-username {
+  margin-left: 56px;
+  padding-top: 4px;
+}
+
+.post-media {
+  height: 160px;
+  border: black 1px solid;
+}
+
+.post-footer {
+  height: 32px;
+  border: black 1px solid;
+  border-radius: 0px 0px 8px 8px;
+  margin-bottom: 16px;
+  padding-left: 4px;
+}

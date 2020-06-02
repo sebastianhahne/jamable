@@ -1,5 +1,22 @@
-<h1>Check out these awesome Posts:</h1>
-<% @posts.each do |post| %>
-  <p><%= post.caption %></p>
-  <p><%= post.mediafiles %></p>
-<% end %>
+<div class="feed-wrapper">
+  <h2>Check out these awesome Posts:</h2>
+  <% @posts.each do |post| %>
+  <div class="post-content">
+    <div class="post-header">
+      <%= cl_image_tag post.user.photo.key, height: 100, width: 100, crop: :fill, class: 'avatar-small user-image' %>
+      <div class="post-username">
+      <%= post.user.username %>
+      </div>
+    </div>
+    <div class="post-media">
+      <p><%= post.mediafiles %></p>
+    </div>
+    <div class="post-footer d-flex">
+      <p><%= post.caption %></p>
+      <div>
+        <!-- <p>Like</p> <p>Comment</p> -->
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
