@@ -1,5 +1,16 @@
 class PostsController < ApplicationController
 
+  def new
+    @user = User.find(params[:user_id])
+    @post = Posts.new
+  end
+
+  def create
+    @user = User.find(params[:user_id])
+    @post.user = current_user
+    @post.save
+  end
+
   def show
     @posts = Posts.find(params[:id])
   end
@@ -8,15 +19,4 @@ class PostsController < ApplicationController
     @posts = Posts.all
   end
 
-  def create
-    @post = Post.find(params[:user_id])
-    @post.user = current_user
-    @post.save
-  end
-
-  def new
-    @post = Posts.new
-  end
-
 end
-
