@@ -4,7 +4,6 @@ class CreatePosts < ActiveRecord::Migration[6.0]
       t.string :mediafiles
       t.string :caption
       t.references :user, null: false, foreign_key: true
-      t.references :tagged_user, null: false, foreign_key: true
 
       t.timestamps
     end
