@@ -8,28 +8,30 @@
     <%= f.input :email,
                 required: true,
                 autofocus: true,
-                input_html: { autocomplete: "email" }%>
+                input_html: { autocomplete: "email" }, class: "width-form" %>
     <%= f.input :password,
                 required: true,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
+                input_html: { autocomplete: "new-password" }, class: "width-form" %>
     <%= f.input :password_confirmation,
                 required: true,
-                input_html: { autocomplete: "new-password" } %>
+                input_html: { autocomplete: "new-password" }, class: "width-form" %>
     <%= f.input :username,
                 required: true,
                 autofocus: true,
-                input_html: { autocomplete: "username" }%>
+                input_html: { autocomplete: "username" }, class: "width-form" %>
     <%= f.input :photo, as: :file %>
     <%= f.input :address,
                 required: true,
                 autofocus: true,
-                input_html: { autocomplete: "address" }%>
+                input_html: { autocomplete: "address" }, class: "width-form" %>
     <%= f.input :genres,
                 required: true,
                 autofocus: true,
-                input_html: { autocomplete: "favourite genres" }%>
-    <%= f.button :submit, "Sign up", class: "btn btn-primary" %>
+                input_html: { autocomplete: "favourite genres" }, class: "width-form" %>
+    <%= f.button :submit, "Sign up", class: "btn-primary" %>
+    <hr>
+    <%= render "devise/shared/links" %>
   </div>
 
 <% end %>
