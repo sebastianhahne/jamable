@@ -7,55 +7,74 @@ User.destroy_all
 # puts 'Kurt cobaining all the instruments...'
 # Instrument.destroy_all
 
-# Creating 5 users
 puts 'Cloning users'
 
-  email = 'sebastian.remm@jamable.com'
-  pw = '123456'
-  username = 'Sebi'
-  address = 'somewhere in Berlin'
-  genre = 'BreakCore'
-  mediafiles = "#{username} has no mediafiles yet"
-  caption = "Hi, my name is #{username}. I like to jam !"
+# creating sebi
   file = URI.open('app/assets/images/users/sebi.jpeg')
-  new_user.photo.attach(io: file, filename: 'sebi.jpeg', content_type: 'image/jpg')
-  new_user = User.create!(email: email, address: address, genre: genre, password: pw, password_confirmation: pw, username: username)
+  new_user = User.new do |u|
+    u.email = "sebastian.remm@jamable.com"
+    u.password = "remm1234"
+    u.password_confirmation = "remm1234"
+    u.address = "somewhere in Berlin"
+    u.genres = "BreakCore"
+    u.username = "Sebi"
+    u.photo.attach(io: file, filename: 'sebi.jpeg', content_type: 'image/jpeg')
+  end
+  new_user.save
+  mediafiles = "#{new_user.username} has no mediafiles yet"
+  caption = "Hi, my name is #{new_user.username}. I like to jam !"
   new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
+  puts "User #{new_user.username} created"
 
-  email = 'sebastian.hahne@jamable.com'
-  pw = '123456'
-  username = 'Basti'
-  address = 'somewhere in Berlin'
-  genre = 'Drum and Base'
-  mediafiles = "#{username} has no mediafiles yet"
-  caption = "Hi, my name is #{username}. I like to jam !"
-  file = URI.open('app/assets/images/users/basti.jpeg')
-  new_user.photo.attach(io: file, filename: 'basti.jpeg', content_type: 'image/jpg')
-  new_user = User.create!(email: email, address: address, genre: genre, password: pw, password_confirmation: pw, username: username)
+# creating basti
+  file = URI.open('app/assets/images/users/basti.png')
+  new_user = User.new do |u|
+    u.email = "sebastian.hahne@jamable.com"
+    u.password = "123456"
+    u.password_confirmation = "123456"
+    u.address = "somewhere in Berlin"
+    u.genres = "Drum and Base"
+    u.username = "Basti"
+    u.photo.attach(io: file, filename: 'basti.jpeg', content_type: 'image/png')
+  end
+  new_user.save
+  mediafiles = "#{new_user.username} has no mediafiles yet"
+  caption = "Hi, my name is #{new_user.username}. I like to jam !"
   new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
+  puts "User #{new_user.username} created"
 
-  email = 'moritz.kork@jamable.com'
-  pw = '123456'
-  username = 'Moe'
-  address = 'somewhere in Berlin'
-  genre = 'DeathMetal'
-  mediafiles = "#{username} has no mediafiles yet"
-  caption = "Hi, my name is #{username}. I like to jam !"
-  file = URI.open('app/assets/images/users/moritz.jpeg')
-  new_user.photo.attach(io: file, filename: 'moritz.jpeg', content_type: 'image/jpg')
-  new_user = User.create!(email: email, address: address, genre: genre, password: pw, password_confirmation: pw, username: username)
+# creating moritz
+  file = URI.open('app/assets/images/users/moritz.png')
+  new_user = User.new do |u|
+    u.email = "moritz.kork@jamable.com"
+    u.password = "123456"
+    u.password_confirmation = "123456"
+    u.address = "somewhere in Berlin"
+    u.genres = "DeathMetal"
+    u.username = "moritz"
+    u.photo.attach(io: file, filename: 'moritz.jpeg', content_type: 'image/png')
+  end
+  new_user.save
+  mediafiles = "#{new_user.username} has no mediafiles yet"
+  caption = "Hi, my name is #{new_user.username}. I like to jam !"
   new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
+  puts "User #{new_user.username} created"
 
-  email = 'benj.riethmuller@jamable.com'
-  pw = '123456'
-  username = 'Benj'
-  address = 'somewhere in Berlin'
-  genre = 'Psychadelic Rock'
-  mediafiles = "#{username} has no mediafiles yet"
-  caption = "Hi, my name is #{username}. I like to jam !"
-  file = URI.open('app/assets/images/users/benj.jpeg')
-  new_user.photo.attach(io: file, filename: 'benj.jpeg', content_type: 'image/jpg')
-  new_user = User.create!(email: email, address: address, genre: genre, password: pw, password_confirmation: pw, username: username)
+# creating benj
+  file = URI.open('app/assets/images/users/benj.jpg')
+  new_user = User.new do |u|
+    u.email = "benj.riethmuller@jamable.com"
+    u.password = "123456"
+    u.password_confirmation = "123456"
+    u.address = "somewhere in Berlin"
+    u.genres = "Psychadelic Rock"
+    u.username = "benj"
+    u.photo.attach(io: file, filename: 'benj.jpeg', content_type: 'image/jpg')
+  end
+  new_user.save
+  mediafiles = "#{new_user.username} has no mediafiles yet"
+  caption = "Hi, my name is #{new_user.username}. I like to jam !"
   new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
+  puts "User #{new_user.username} created"
 
 puts 'Done'
