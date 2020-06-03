@@ -103,7 +103,7 @@ ActiveRecord::Schema.define(version: 2020_06_03_112127) do
   end
 
   create_table "user_instruments", force: :cascade do |t|
-    t.integer "skill_level"
+    t.string "skill_level"
     t.bigint "user_id", null: false
     t.bigint "instrument_id", null: false
     t.datetime "created_at", precision: 6, null: false
