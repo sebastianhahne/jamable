@@ -1,4 +1,15 @@
 class User < ApplicationRecord
+  include PgSearch
+  pg_search_scope :global_search,
+    against: [:username],
+    associated_against: {
+      instrument: [:name, 'A'] ,
+      user_instrument: [:skill_level, 'A']
+      genre: [:name, 'B'],
+      post: [:caption, 'C']
+
+    }
+
   has_many :user_instruments
   has_many :user_genres
   has_many :messages
