@@ -1,6 +1,15 @@
 class UserInstrumentsController < ApplicationController
+
   def new
     @user_instrument = UserInstrument.new
+  end
+
+  def index
+    @user_instrument = UserInstrument.all
+  end
+
+  def show
+    @user_instruments = UserInstrument.find(params[:id])
   end
 
   def create

@@ -5,6 +5,11 @@ class ProfilesController < ApplicationController
   end
 
   def index
-    @profiles = User.all
+    if params[:query].present?
+      @profiles = User.global_search(params[:query])
+    else
+      @profiles = User.all
+    end
   end
+
 end
