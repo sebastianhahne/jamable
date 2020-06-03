@@ -25,13 +25,7 @@
                 required: true,
                 autofocus: true,
                 input_html: { autocomplete: "address" }, class: "width-form" %>
-    <%= f.input :genres,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "favourite genres" }, class: "width-form" %>
-    <%= f.button :submit, "Sign up", class: "btn-primary" %>
-    <hr>
-    <%= render "devise/shared/links" %>
+    <%= f.button :submit, "Sign up", class: "button btn-primary w-100" %>
   </div>
 
 <% end %>

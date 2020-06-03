@@ -5,10 +5,10 @@
 
       <h1>Add a new instrument</h1>
 
-      <%= f.input :name,
-      required: true,
-      autofocus: true,
-      input_html: { autocomplete: "Instrument" }%>
+      <%= f.fields_for :name do |name_form| %>
+        <%= name_form.select(:instrument_id, options_from_collection_for_select(Instrument.all, "id", "name")) %>
+      <% end %>
+
       <%= f.input :skill_level, as: :select, collection: UserInstrument::SKILL_LEVELS %>
       <%= f.button :submit, "Add instrument", class: "btn-primary w-100" %>
 

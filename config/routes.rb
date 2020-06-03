@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { registrations: "registrations" }
   root to: 'posts#index'
 
   get 'dashboard', to: 'dashboard#overview', as: :dashboard
@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   resources :posts, only: [:index, :new, :create, :show]
 
-  resources :instruments
+  resources :user_instruments, only: [:new, :create]
 
   resources :profiles, only: [:index, :show]
 
