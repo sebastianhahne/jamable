@@ -1,4 +1,6 @@
 .wrapper {
-  height: calc(100vh - 60px);
   background-color: $dblue;
+}
+.footer-blocker {
+  height: 60px;
 }
