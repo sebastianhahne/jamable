@@ -1,5 +1,12 @@
+html {
+  background-color: $dblue;
+}
 .wrapper {
   background-color: $dblue;
+  color: $white;
+}
+.button {
+  margin-top: 8px;
 }
 .footer-blocker {
   height: 60px;
