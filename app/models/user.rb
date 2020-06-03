@@ -1,17 +1,25 @@
-class User < ApplicationRecord  
-  include PgSearch
-  pg_search_scope :global_search,
-    against: [:username],
-    associated_against: {
-      instrument: [:name, 'A'] ,
-      user_instrument: [:skill_level, 'A'],
-      genre: [:name, 'B'],
-      post: [:caption, 'C']
-
-    }
+class User < ApplicationRecord
+  include PgSearch::Model
+  pg_search_scope :global_search, against: [:username],
+   associated_against: {
+      instruments: [:name],
+      user_instruments: [:skill_level],
+      genres: [:name],
+      posts: [:caption]
+     }
+    # },
+    # using: { 
+    #     tsearch: { 
+    #     prefix: true, 
+    #     dictionary: "english" 
+    #   }, 
+    #   trigram: { only: [:username] }
+    # }
 
   has_many :user_instruments, dependent: :destroy
+  has_many :instruments, through: :user_instruments
   has_many :user_genres, dependent: :destroy
+  has_many :genres, through: :user_genres
   has_many :messages
   has_many :chatrooms, through: :messages
   has_many :posts, dependent: :destroy
