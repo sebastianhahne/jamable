@@ -4,7 +4,7 @@ class User < ApplicationRecord
     against: [:username],
     associated_against: {
       instrument: [:name, 'A'] ,
-      user_instrument: [:skill_level, 'A']
+      user_instrument: [:skill_level, 'A'],
       genre: [:name, 'B'],
       post: [:caption, 'C']
 
