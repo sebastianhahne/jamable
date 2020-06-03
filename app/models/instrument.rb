@@ -1,7 +1,6 @@
-class Instrument < ApplicationRecord
-  SKILL_LEVELS = ['Beginner', 'Intermediate', 'Expert']
-  belongs_to :user
+class InstrumentNew < ApplicationRecord
+  has_many :user_instruments
+  has_many :users, through: :user_instruments
 
   validates :name, presence: true
-  validates :skill_level, inclusion: { in: SKILL_LEVELS }
 end

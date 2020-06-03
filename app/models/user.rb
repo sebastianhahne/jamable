@@ -1,5 +1,6 @@
 class User < ApplicationRecord
-  has_many :instruments
+  has_many :user_instruments
+  has_many :user_genres
   has_many :messages
   has_many :chatrooms, through: :messages
   has_many :posts
@@ -11,7 +12,7 @@ class User < ApplicationRecord
   validates :address, presence: true
   # Check devise validations
   validates :photo, presence: true
-  validates :genres, presence: true
+  validates :user_genres, presence: true
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
