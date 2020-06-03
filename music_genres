@@ -1,0 +1,565 @@
+﻿Index;Branch;Item
+1;Category;Blues
+2;Subcategory;Boogie Woogie
+3;Subcategory;Chicago Blues
+4;Subcategory;Country Blues
+5;Subcategory;Delta Blues
+6;Subcategory;East Coast Blues
+7;Subcategory;Electric Blues
+8;Subcategory;Harmonica Blues
+9;Subcategory;Jump Blues
+10;Subcategory;Louisiana Blues
+11;Subcategory;Memphis Blues
+12;Subcategory;Modern Electric Blues
+13;Subcategory;Piano Blues
+14;Subcategory;Piedmont Blues
+15;Subcategory;Rhythm & Blues
+16;Subcategory;Texas Blues
+17;Category;Brass & Military
+18;Subcategory;Brass Band
+19;Subcategory;Marches
+20;Subcategory;Military
+21;Subcategory;Pipe & Drum
+22;Category;Children’s
+23;Subcategory;Educational
+24;Subcategory;Nursery Rhymes
+25;Subcategory;Story
+26;Category;Classical
+27;Subcategory;Baroque
+28;Subcategory;Choral
+29;Subcategory;Classical
+30;Subcategory;Contemporary
+31;Subcategory;Early
+32;Subcategory;Impressionist
+33;Subcategory;Medieval
+34;Subcategory;Modern
+35;Subcategory;Neo-Classical
+36;Subcategory;Neo-Romantic
+37;Subcategory;Opera
+38;Subcategory;Operetta
+39;Subcategory;Oratorio
+40;Subcategory;Post-Modern
+41;Subcategory;Renaissance
+42;Subcategory;Romantic
+43;Subcategory;Serial
+44;Subcategory;Twelve-tone
+45;Subcategory;Zarzuela
+46;Category;Electronic
+47;Subcategory;Abstract
+48;Subcategory;Acid
+49;Subcategory;Acid House
+50;Subcategory;Acid Jazz
+51;Subcategory;Ambient
+52;Subcategory;Ballroom
+53;Subcategory;Baltimore Club
+54;Subcategory;Bassline
+55;Subcategory;Beatdown
+56;Subcategory;Berlin-School
+57;Subcategory;Big Beat
+58;Subcategory;Breakbeat
+59;Subcategory;Breakcore
+60;Subcategory;Breaks
+61;Subcategory;Broken Beat
+62;Subcategory;Chillwave
+63;Subcategory;Chiptune
+64;Subcategory;Dance-pop
+65;Subcategory;Dark Ambient
+66;Subcategory;Darkwave
+67;Subcategory;Deep House
+68;Subcategory;Deep Techno
+69;Subcategory;Disco
+70;Subcategory;Disco Polo
+71;Subcategory;Donk
+72;Subcategory;Doomcore
+73;Subcategory;Downtempo
+74;Subcategory;Drone
+75;Subcategory;Drum n Bass
+76;Subcategory;Dub
+77;Subcategory;Dub Techno
+78;Subcategory;Dubstep
+79;Subcategory;Dungeon Synth
+80;Subcategory;EBM
+81;Subcategory;Electro
+82;Subcategory;Electro House
+83;Subcategory;Electroclash
+84;Subcategory;Euro House
+85;Subcategory;Euro-Disco
+86;Subcategory;Eurobeat
+87;Subcategory;Eurodance
+88;Subcategory;Experimental
+89;Subcategory;Freestyle
+90;Subcategory;Funkot
+91;Subcategory;Future Jazz
+92;Subcategory;Gabber
+93;Subcategory;Garage House
+94;Subcategory;Ghetto
+95;Subcategory;Ghetto House
+96;Subcategory;Ghettotech
+97;Subcategory;Glitch
+98;Subcategory;Goa Trance
+99;Subcategory;Grime
+100;Subcategory;Hands Up
+101;Subcategory;Happy Hardcore
+102;Subcategory;Hard Beat
+103;Subcategory;Hard House
+104;Subcategory;Hard Techno
+105;Subcategory;Hard Trance
+106;Subcategory;Hardcore
+107;Subcategory;Hardstyle
+108;Subcategory;Harsh Noise Wall
+109;Subcategory;Hi NRG
+110;Subcategory;Hip Hop
+111;Subcategory;Hip-House
+112;Subcategory;House
+113;Subcategory;IDM
+114;Subcategory;Illbient
+115;Subcategory;Industrial
+116;Subcategory;Italo House
+117;Subcategory;Italo-Disco
+118;Subcategory;Italodance
+119;Subcategory;J-Core
+120;Subcategory;Jazzdance
+121;Subcategory;Juke
+122;Subcategory;Jumpstyle
+123;Subcategory;Jungle
+124;Subcategory;Latin
+125;Subcategory;Leftfield
+126;Subcategory;Lento Violento
+127;Subcategory;Makina
+128;Subcategory;Minimal
+129;Subcategory;Minimal Techno
+130;Subcategory;Modern Classical
+131;Subcategory;Musique Concrète
+132;Subcategory;Neo Trance
+133;Subcategory;Neofolk
+134;Subcategory;Nerdcore Techno
+135;Subcategory;New Age
+136;Subcategory;New Beat
+137;Subcategory;New Wave
+138;Subcategory;Noise
+139;Subcategory;Nu-Disco
+140;Subcategory;Power Electronics
+141;Subcategory;Progressive Breaks
+142;Subcategory;Progressive House
+143;Subcategory;Progressive Trance
+144;Subcategory;Psy-Trance
+145;Subcategory;Rhythmic Noise
+146;Subcategory;Schranz
+147;Subcategory;Skweee
+148;Subcategory;Sound Collage
+149;Subcategory;Speed Garage
+150;Subcategory;Speedcore
+151;Subcategory;Synth-pop
+152;Subcategory;Synthwave
+153;Subcategory;Tech House
+154;Subcategory;Tech Trance
+155;Subcategory;Techno
+156;Subcategory;Trance
+157;Subcategory;Tribal
+158;Subcategory;Tribal House
+159;Subcategory;Trip Hop
+160;Subcategory;Tropical House
+161;Subcategory;UK Funky
+162;Subcategory;UK Garage
+163;Subcategory;Vaporwave
+164;Subcategory;Witch House
+165;Category;Folk, World & Country
+166;Subcategory;Aboriginal
+167;Subcategory;African
+168;Subcategory;Andalusian Classical
+169;Subcategory;Appalachian Music
+170;Subcategory;Bangladeshi Classical
+171;Subcategory;Basque Music
+172;Subcategory;Bengali Music
+173;Subcategory;Bhangra
+174;Subcategory;Bluegrass
+175;Subcategory;Cajun
+176;Subcategory;Cambodian Classical
+177;Subcategory;Canzone Napoletana
+178;Subcategory;Carnatic
+179;Subcategory;Catalan Music
+180;Subcategory;Celtic
+181;Subcategory;Chacarera
+182;Subcategory;Chamamé
+183;Subcategory;Chinese Classical
+184;Subcategory;Chutney
+185;Subcategory;Cobla
+186;Subcategory;Copla
+187;Subcategory;Country
+188;Subcategory;Dangdut
+189;Subcategory;Éntekhno
+190;Subcategory;Fado
+191;Subcategory;Filk
+192;Subcategory;Flamenco
+193;Subcategory;Folk
+194;Subcategory;Funaná
+195;Subcategory;Gagaku
+196;Subcategory;Gamelan
+197;Subcategory;Gospel
+198;Subcategory;Griot
+199;Subcategory;Guarania
+200;Subcategory;Hawaiian
+201;Subcategory;Highlife
+202;Subcategory;Hillbilly
+203;Subcategory;Hindustani
+204;Subcategory;Honky Tonk
+205;Subcategory;Indian Classical
+206;Subcategory;Jota
+207;Subcategory;Kaseko
+208;Subcategory;Keroncong
+209;Subcategory;Kizomba
+210;Subcategory;Klasik
+211;Subcategory;Klezmer
+212;Subcategory;Korean Court Music
+213;Subcategory;Laïkó
+214;Subcategory;Lao Music
+215;Subcategory;Liscio
+216;Subcategory;Luk Krung
+217;Subcategory;Luk Thung
+218;Subcategory;Maloya
+219;Subcategory;Mbalax
+220;Subcategory;Min’yō
+221;Subcategory;Mizrahi
+222;Subcategory;Mouth Music
+223;Subcategory;Mugham
+224;Subcategory;Népzene
+225;Subcategory;Nordic
+226;Subcategory;Ottoman Classical
+227;Subcategory;Overtone Singing
+228;Subcategory;Pacific
+229;Subcategory;Pasodoble
+230;Subcategory;Persian Classical
+231;Subcategory;Philippine Classical
+232;Subcategory;Phleng Phuea Chiwit
+233;Subcategory;Piobaireachd
+234;Subcategory;Polka
+235;Subcategory;Progressive Bluegrass
+236;Subcategory;Raï
+237;Subcategory;Rebetiko
+238;Subcategory;Romani
+239;Subcategory;Rune Singing
+240;Subcategory;Salegy
+241;Subcategory;Sámi Music
+242;Subcategory;Sea Shanties
+243;Subcategory;Séga
+244;Subcategory;Sephardic
+245;Subcategory;Soukous
+246;Subcategory;Thai Classical
+247;Subcategory;Volksmusik
+248;Subcategory;Waiata
+249;Subcategory;Western Swing
+250;Subcategory;Zamba
+251;Subcategory;Zemer Ivri
+252;Subcategory;Zouk
+253;Subcategory;Zydeco
+254;Category;Funk/Soul
+255;Subcategory;Afrobeat
+256;Subcategory;Bayou Funk
+257;Subcategory;Boogie
+258;Subcategory;Contemporary R&B
+259;Subcategory;Disco
+260;Subcategory;Free Funk
+261;Subcategory;Funk
+262;Subcategory;Gogo
+263;Subcategory;Gospel
+264;Subcategory;Minneapolis Sound
+265;Subcategory;Neo Soul
+266;Subcategory;New Jack Swing
+267;Subcategory;P.Funk
+268;Subcategory;Psychedelic
+269;Subcategory;Rhythm & Blues
+270;Subcategory;Soul
+271;Subcategory;Swingbeat
+272;Subcategory;UK Street Soul
+273;Category;Hip Hop
+274;Subcategory;Bass Music
+275;Subcategory;Beatbox
+276;Subcategory;Bongo Flava
+277;Subcategory;Boom Bap
+278;Subcategory;Bounce
+279;Subcategory;Britcore
+280;Subcategory;Cloud Rap
+281;Subcategory;Conscious
+282;Subcategory;Crunk
+283;Subcategory;Cut-up/DJ
+284;Subcategory;DJ Battle Tool
+285;Subcategory;Electro
+286;Subcategory;Favela Funk
+287;Subcategory;G-Funk
+288;Subcategory;Gangsta
+289;Subcategory;Go-Go
+290;Subcategory;Grime
+291;Subcategory;Hardcore Hip-Hop
+292;Subcategory;Hiplife
+293;Subcategory;Horrorcore
+294;Subcategory;Hyphy
+295;Subcategory;Instrumental
+296;Subcategory;Jazzy Hip-Hop
+297;Subcategory;Kwaito
+298;Subcategory;Miami Bass
+299;Subcategory;Motswako
+300;Subcategory;Pop Rap
+301;Subcategory;Ragga HipHop
+302;Subcategory;RnB/Swing
+303;Subcategory;Screw
+304;Subcategory;Spaza
+305;Subcategory;Thug Rap
+306;Subcategory;Trap
+307;Subcategory;Trip Hop
+308;Subcategory;Turntablism
+309;Category;Jazz
+310;Subcategory;Afro-Cuban Jazz
+311;Subcategory;Afrobeat
+312;Subcategory;Avant-garde Jazz
+313;Subcategory;Big Band
+314;Subcategory;Bop
+315;Subcategory;Bossa Nova
+316;Subcategory;Cape Jazz
+317;Subcategory;Contemporary Jazz
+318;Subcategory;Cool Jazz
+319;Subcategory;Dixieland
+320;Subcategory;Easy Listening
+321;Subcategory;Free Improvisation
+322;Subcategory;Free Jazz
+323;Subcategory;Fusion
+324;Subcategory;Gypsy Jazz
+325;Subcategory;Hard Bop
+326;Subcategory;Jazz-Funk
+327;Subcategory;Jazz-Rock
+328;Subcategory;Latin Jazz
+329;Subcategory;Modal
+330;Subcategory;Post Bop
+331;Subcategory;Ragtime
+332;Subcategory;Smooth Jazz
+333;Subcategory;Soul-Jazz
+334;Subcategory;Space-Age
+335;Subcategory;Swing
+336;Category;Latin
+337;Subcategory;Afro-Cuban
+338;Subcategory;Axé
+339;Subcategory;Bachata
+340;Subcategory;Baião
+341;Subcategory;Batucada
+342;Subcategory;Beguine
+343;Subcategory;Bolero
+344;Subcategory;Bomba
+345;Subcategory;Boogaloo
+346;Subcategory;Bossanova
+347;Subcategory;Candombe
+348;Subcategory;Carimbó
+349;Subcategory;Cha-Cha
+350;Subcategory;Champeta
+351;Subcategory;Charanga
+352;Subcategory;Choro
+353;Subcategory;Compas
+354;Subcategory;Conjunto
+355;Subcategory;Corrido
+356;Subcategory;Cuatro
+357;Subcategory;Cubano
+358;Subcategory;Cumbia
+359;Subcategory;Danzon
+360;Subcategory;Descarga
+361;Subcategory;Forró
+362;Subcategory;Gaita
+363;Subcategory;Guaguancó
+364;Subcategory;Guajira
+365;Subcategory;Guaracha
+366;Subcategory;Jibaro
+367;Subcategory;Joropo
+368;Subcategory;Lambada
+369;Subcategory;Mambo
+370;Subcategory;Marcha Carnavalesca
+371;Subcategory;Mariachi
+372;Subcategory;Marimba
+373;Subcategory;Merengue
+374;Subcategory;MPB
+375;Subcategory;Musette
+376;Subcategory;Música Criolla
+377;Subcategory;Norteño
+378;Subcategory;Nueva Cancion
+379;Subcategory;Nueva Trova
+380;Subcategory;Occitan
+381;Subcategory;Pachanga
+382;Subcategory;Plena
+383;Subcategory;Porro
+384;Subcategory;Quechua
+385;Subcategory;Ranchera
+386;Subcategory;Reggaeton
+387;Subcategory;Rumba
+388;Subcategory;Salsa
+389;Subcategory;Samba
+390;Subcategory;Samba-Canção
+391;Subcategory;Seresta
+392;Subcategory;Son
+393;Subcategory;Son Montuno
+394;Subcategory;Sonero
+395;Subcategory;Tango
+396;Subcategory;Tejano
+397;Subcategory;Timba
+398;Subcategory;Trova
+399;Subcategory;Vallenato
+400;Category;Non-Music
+401;Subcategory;Audiobook
+402;Subcategory;Comedy
+403;Subcategory;Dialogue
+404;Subcategory;Education
+405;Subcategory;Field Recording
+406;Subcategory;Health-Fitness
+407;Subcategory;Interview
+408;Subcategory;Monolog
+409;Subcategory;Movie Effects
+410;Subcategory;Poetry
+411;Subcategory;Political
+412;Subcategory;Promotional
+413;Subcategory;Public Broadcast
+414;Subcategory;Public Service Announcement
+415;Subcategory;Radioplay
+416;Subcategory;Religious
+417;Subcategory;Sermon
+418;Subcategory;Sound Art
+419;Subcategory;Sound Poetry
+420;Subcategory;Special Effects
+421;Subcategory;Speech
+422;Subcategory;Spoken Word
+423;Subcategory;Technical
+424;Subcategory;Therapy
+425;Category;Pop
+426;Subcategory;Ballad
+427;Subcategory;Barbershop
+428;Subcategory;Bollywood
+429;Subcategory;Break-In
+430;Subcategory;Bubblegum
+431;Subcategory;Chanson
+432;Subcategory;Enka
+433;Subcategory;Ethno-pop
+434;Subcategory;Europop
+435;Subcategory;Indie Pop
+436;Subcategory;J-pop
+437;Subcategory;K-pop
+438;Subcategory;Karaoke
+439;Subcategory;Kayōkyoku
+440;Subcategory;Levenslied
+441;Subcategory;Light Music
+442;Subcategory;Music Hall
+443;Subcategory;Néo Kyma
+444;Subcategory;Novelty
+445;Subcategory;Parody
+446;Subcategory;Schlager
+447;Subcategory;Vocal
+448;Category;Reggae
+449;Subcategory;Azonto
+450;Subcategory;Bubbling
+451;Subcategory;Calypso
+452;Subcategory;Dancehall
+453;Subcategory;Dub
+454;Subcategory;Dub Poetry
+455;Subcategory;Junkanoo
+456;Subcategory;Lovers Rock
+457;Subcategory;Mento
+458;Subcategory;Ragga
+459;Subcategory;Rapso
+460;Subcategory;Reggae
+461;Subcategory;Reggae Gospel
+462;Subcategory;Reggae-Pop
+463;Subcategory;Rocksteady
+464;Subcategory;Roots Reggae
+465;Subcategory;Ska
+466;Subcategory;Soca
+467;Subcategory;Steel Band
+468;Category;Rock
+469;Subcategory;Acid Rock
+470;Subcategory;Acoustic
+471;Subcategory;Alternative Rock
+472;Subcategory;AOR
+473;Subcategory;Arena Rock
+474;Subcategory;Art Rock
+475;Subcategory;Atmospheric Black Metal
+476;Subcategory;Avantgarde
+477;Subcategory;Beat
+478;Subcategory;Black Metal
+479;Subcategory;Blues Rock
+480;Subcategory;Brit Pop
+481;Subcategory;Classic Rock
+482;Subcategory;Coldwave
+483;Subcategory;Country Rock
+484;Subcategory;Crust
+485;Subcategory;Death Metal
+486;Subcategory;Deathcore
+487;Subcategory;Deathrock
+488;Subcategory;Depressive Black Metal
+489;Subcategory;Doo Wop
+490;Subcategory;Doom Metal
+491;Subcategory;Dream Pop
+492;Subcategory;Emo
+493;Subcategory;Ethereal
+494;Subcategory;Experimental
+495;Subcategory;Folk Metal
+496;Subcategory;Folk Rock
+497;Subcategory;Funeral Doom Metal
+498;Subcategory;Funk Metal
+499;Subcategory;Garage Rock
+500;Subcategory;Glam
+501;Subcategory;Goregrind
+502;Subcategory;Goth Rock
+503;Subcategory;Gothic Metal
+504;Subcategory;Grindcore
+505;Subcategory;Grunge
+506;Subcategory;Hard Rock
+507;Subcategory;Hardcore
+508;Subcategory;Heavy Metal
+509;Subcategory;Horror Rock
+510;Subcategory;Indie Rock
+511;Subcategory;Industrial
+512;Subcategory;Krautrock
+513;Subcategory;Lo-Fi
+514;Subcategory;Lounge
+515;Subcategory;Math Rock
+516;Subcategory;Melodic Death Metal
+517;Subcategory;Melodic Hardcore
+518;Subcategory;Metalcore
+519;Subcategory;Mod
+520;Subcategory;NDW
+521;Subcategory;Neofolk
+522;Subcategory;New Wave
+523;Subcategory;No Wave
+524;Subcategory;Noise
+525;Subcategory;Noisecore
+526;Subcategory;Nu Metal
+527;Subcategory;Oi
+528;Subcategory;Parody
+529;Subcategory;Pop Punk
+530;Subcategory;Pop Rock
+531;Subcategory;Pornogrind
+532;Subcategory;Post Rock
+533;Subcategory;Post-Hardcore
+534;Subcategory;Post-Metal
+535;Subcategory;Post-Punk
+536;Subcategory;Power Metal
+537;Subcategory;Power Pop
+538;Subcategory;Power Violence
+539;Subcategory;Prog Rock
+540;Subcategory;Progressive Metal
+541;Subcategory;Psychedelic Rock
+542;Subcategory;Psychobilly
+543;Subcategory;Pub Rock
+544;Subcategory;Punk
+545;Subcategory;Rock & Roll
+546;Subcategory;Rock Opera
+547;Subcategory;Rockabilly
+548;Subcategory;Shoegaze
+549;Subcategory;Ska
+550;Subcategory;Skiffle
+551;Subcategory;Sludge Metal
+552;Subcategory;Soft Rock
+553;Subcategory;Southern Rock
+554;Subcategory;Space Rock
+555;Subcategory;Speed Metal
+556;Subcategory;Stoner Rock
+557;Subcategory;Surf
+558;Subcategory;Swamp Pop
+559;Subcategory;Symphonic Rock
+560;Subcategory;Technical Death Metal
+561;Subcategory;Thrash
+562;Subcategory;Twist
+563;Subcategory;Viking Metal
+564;Subcategory;Yé-Yé
