@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_02_135449) do
+ActiveRecord::Schema.define(version: 2020_06_03_112127) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,9 +52,14 @@ ActiveRecord::Schema.define(version: 2020_06_02_135449) do
     t.index ["receiver_id"], name: "index_friendships_on_receiver_id"
   end
 
+  create_table "genres", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "instruments", force: :cascade do |t|
     t.string "name"
-    t.integer "skill_level"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -87,6 +92,26 @@ ActiveRecord::Schema.define(version: 2020_06_02_135449) do
     t.index ["user_id"], name: "index_tagged_users_on_user_id"
   end
 
+  create_table "user_genres", force: :cascade do |t|
+    t.string "name"
+    t.bigint "user_id", null: false
+    t.bigint "genre_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["genre_id"], name: "index_user_genres_on_genre_id"
+    t.index ["user_id"], name: "index_user_genres_on_user_id"
+  end
+
+  create_table "user_instruments", force: :cascade do |t|
+    t.integer "skill_level"
+    t.bigint "user_id", null: false
+    t.bigint "instrument_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["instrument_id"], name: "index_user_instruments_on_instrument_id"
+    t.index ["user_id"], name: "index_user_instruments_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -96,12 +121,9 @@ ActiveRecord::Schema.define(version: 2020_06_02_135449) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "username"
-    t.string "genres"
     t.string "address"
     t.boolean "availability"
-    t.bigint "instrument_id"
     t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["instrument_id"], name: "index_users_on_instrument_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
@@ -113,5 +135,8 @@ ActiveRecord::Schema.define(version: 2020_06_02_135449) do
   add_foreign_key "posts", "users"
   add_foreign_key "tagged_users", "posts"
   add_foreign_key "tagged_users", "users"
-  add_foreign_key "users", "instruments"
+  add_foreign_key "user_genres", "genres"
+  add_foreign_key "user_genres", "users"
+  add_foreign_key "user_instruments", "instruments"
+  add_foreign_key "user_instruments", "users"
 end

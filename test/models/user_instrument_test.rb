@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class InstrumentNewTest < ActiveSupport::TestCase
+class UserInstrumentTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
