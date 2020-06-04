@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12">
+      <%= simple_form_for @user_genre do |f| %>
+
+      <h1>Add a new genre</h1>
+
+      <%= f.fields_for :name do |name_form| %>
+        <%= name_form.select(:genre_id, options_from_collection_for_select(Genre.all, "id", "name")) %>
+      <% end %>
+
+      <%= f.button :submit, "Add genre", class: "btn-primary w-100" %>
+
+      <% end %>
+
+    </div>
+  </div>
+</div>

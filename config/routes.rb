@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   resources :user_instruments, only: [:new, :create]
 
+  resources :user_genres, only: [:new, :create]
+
   resources :profiles, only: [:index, :show]
 
 end
