@@ -5,20 +5,25 @@
     <div class="post-header">
       <%= cl_image_tag post.user.photo.key, height: 100, width: 100, crop: :fill, class: 'avatar-small user-image' %>
       <div class="post-username">
-      <%= post.user.username %>
+        <%= post.user.username %> <p> shared an image </p>
       </div>
     </div>
     <div class="post-media">
       <% post.pictures.each do |p| %>
-        <p><%= cl_image_tag p.key %></p>
+        <%= cl_image_tag p.key, width: 372, class: 'post-image'  %>
       <% end %>
     </div>
-    <div class="post-footer d-flex">
-      <p><%= post.caption %></p>
-      <div>
-        <!-- <p>Like</p> <p>Comment</p> -->
+
+    <div class="post-footer">
+      <div class="caption">
+        <p><%= post.caption %></p>
+      </div>
+      <div class="like-buttons">
+        <i class="far fa-heart buttons"></i>
+        <i class="far fa-comment buttons"></i>
       </div>
     </div>
+
   </div>
   <% end %>
 </div>
