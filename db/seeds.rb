@@ -56,7 +56,7 @@ puts 'Cloning users'
     user_instrument.skill_level = ['Beginner', 'Intermediate', 'Expert'].sample
     user_instrument.save!
 
-    mediafiles = "#{new_user.username} has no mediafiles yet"
+    mediafiles = nil
     caption = "Hi, my name is #{new_user.username}. I like to jam !"
     new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
     puts "User #{new_user.username} created"
@@ -86,7 +86,7 @@ puts 'Cloning users'
   user_instrument.skill_level = ['Beginner', 'Intermediate', 'Expert'].sample
   user_instrument.save!
 
-  mediafiles = "#{new_user.username} has no mediafiles yet"
+  mediafiles = nil
   caption = "Hi, my name is #{new_user.username}. I like to jam !"
   new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
   puts "User #{new_user.username} created"
@@ -115,7 +115,7 @@ puts 'Cloning users'
   user_instrument.skill_level = ['Beginner', 'Intermediate', 'Expert'].sample
   user_instrument.save!
 
-  mediafiles = "#{new_user.username} has no mediafiles yet"
+  mediafiles = nil
   caption = "Hi, my name is #{new_user.username}. I like to jam !"
   new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
   puts "User #{new_user.username} created"
@@ -144,7 +144,7 @@ puts 'Cloning users'
   user_instrument.skill_level = ['Beginner', 'Intermediate', 'Expert'].sample
   user_instrument.save!
 
-  mediafiles = "#{new_user.username} has no mediafiles yet"
+  mediafiles = nil
   caption = "Hi, my name is #{new_user.username}. I like to jam !"
   new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
   puts "User #{new_user.username} created"
@@ -173,7 +173,7 @@ puts 'Cloning users'
     user_instrument.skill_level = ['Beginner', 'Intermediate', 'Expert'].sample
     user_instrument.save!
 
-    mediafiles = "#{new_user.username} has no mediafiles yet"
+    mediafiles = nil
     caption = "Hi, my name is #{new_user.username}. I like to jam !"
     new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
     puts "User #{new_user.username} created"
@@ -202,7 +202,7 @@ puts 'Cloning users'
       user_instrument.skill_level = ['Beginner', 'Intermediate', 'Expert'].sample
       user_instrument.save!
 
-      mediafiles = "#{new_user.username} has no mediafiles yet"
+      mediafiles = nil
       caption = "Hi, my name is #{new_user.username}. I like to jam !"
       new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
       puts "User #{new_user.username} created"
@@ -231,7 +231,7 @@ puts 'Cloning users'
         user_instrument.skill_level = ['Beginner', 'Intermediate', 'Expert'].sample
         user_instrument.save!
 
-        mediafiles = "#{new_user.username} has no mediafiles yet"
+        mediafiles = nil
         caption = "Hi, my name is #{new_user.username}. I like to jam !"
         new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
         puts "User #{new_user.username} created"
@@ -260,7 +260,7 @@ puts 'Cloning users'
           user_instrument.skill_level = ['Beginner', 'Intermediate', 'Expert'].sample
           user_instrument.save!
 
-          mediafiles = "#{new_user.username} has no mediafiles yet"
+          mediafiles = nil
           caption = "Hi, my name is #{new_user.username}. I like to jam !"
           new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
           puts "User #{new_user.username} created"
@@ -289,7 +289,7 @@ puts 'Cloning users'
           user_instrument.skill_level = ['Beginner', 'Intermediate', 'Expert'].sample
           user_instrument.save!
 
-          mediafiles = "#{new_user.username} has no mediafiles yet"
+          mediafiles = nil
           caption = "Hi, my name is #{new_user.username}. I like to jam !"
           new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
           puts "User #{new_user.username} created"
@@ -318,7 +318,7 @@ puts 'Cloning users'
           user_instrument.skill_level = ['Beginner', 'Intermediate', 'Expert'].sample
           user_instrument.save!
 
-          mediafiles = "#{new_user.username} has no mediafiles yet"
+          mediafiles = nil
           caption = "Hi, my name is #{new_user.username}. I like to jam !"
           new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
           puts "User #{new_user.username} created"
@@ -347,7 +347,7 @@ puts 'Cloning users'
           user_instrument.skill_level = ['Beginner', 'Intermediate', 'Expert'].sample
           user_instrument.save!
 
-          mediafiles = "#{new_user.username} has no mediafiles yet"
+          mediafiles = nil
           caption = "Hi, my name is #{new_user.username}. I like to jam !"
           new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
           puts "User #{new_user.username} created"
@@ -376,7 +376,7 @@ puts 'Cloning users'
           user_instrument.skill_level = ['Beginner', 'Intermediate', 'Expert'].sample
           user_instrument.save!
 
-          mediafiles = "#{new_user.username} has no mediafiles yet"
+          mediafiles = nil
           caption = "Hi, my name is #{new_user.username}. I like to jam !"
           new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
           puts "User #{new_user.username} created"
@@ -405,7 +405,7 @@ puts 'Cloning users'
           user_instrument.skill_level = ['Beginner', 'Intermediate', 'Expert'].sample
           user_instrument.save!
 
-          mediafiles = "#{new_user.username} has no mediafiles yet"
+          mediafiles = nil
           caption = "Hi, my name is #{new_user.username}. I like to jam !"
           new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
           puts "User #{new_user.username} created"
@@ -434,7 +434,7 @@ puts 'Cloning users'
           user_instrument.skill_level = ['Beginner', 'Intermediate', 'Expert'].sample
           user_instrument.save!
 
-          mediafiles = "#{new_user.username} has no mediafiles yet"
+          mediafiles = nil
           caption = "Hi, my name is #{new_user.username}. I like to jam !"
           new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
           puts "User #{new_user.username} created"
@@ -463,7 +463,7 @@ puts 'Cloning users'
           user_instrument.skill_level = ['Beginner', 'Intermediate', 'Expert'].sample
           user_instrument.save!
 
-          mediafiles = "#{new_user.username} has no mediafiles yet"
+          mediafiles = nil
           caption = "Hi, my name is #{new_user.username}. I like to jam !"
           new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
           puts "User #{new_user.username} created"
@@ -492,7 +492,7 @@ puts 'Cloning users'
           user_instrument.skill_level = ['Beginner', 'Intermediate', 'Expert'].sample
           user_instrument.save!
 
-          mediafiles = "#{new_user.username} has no mediafiles yet"
+          mediafiles = nil
           caption = "Hi, my name is #{new_user.username}. I like to jam !"
           new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
           puts "User #{new_user.username} created"
@@ -521,7 +521,7 @@ puts 'Cloning users'
             user_instrument.skill_level = ['Beginner', 'Intermediate', 'Expert'].sample
             user_instrument.save!
 
-            mediafiles = "#{new_user.username} has no mediafiles yet"
+            mediafiles = nil
             caption = "Hi, my name is #{new_user.username}. I like to jam !"
             new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
             puts "User #{new_user.username} created"
@@ -550,7 +550,7 @@ puts 'Cloning users'
           user_instrument.skill_level = ['Beginner', 'Intermediate', 'Expert'].sample
           user_instrument.save!
 
-          mediafiles = "#{new_user.username} has no mediafiles yet"
+          mediafiles = nil
           caption = "Hi, my name is #{new_user.username}. I like to jam !"
           new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
           puts "User #{new_user.username} created"
@@ -579,7 +579,7 @@ puts 'Cloning users'
           user_instrument.skill_level = ['Beginner', 'Intermediate', 'Expert'].sample
           user_instrument.save!
 
-          mediafiles = "#{new_user.username} has no mediafiles yet"
+          mediafiles = nil
           caption = "Hi, my name is #{new_user.username}. I like to jam !"
           new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
           puts "User #{new_user.username} created"
@@ -608,11 +608,17 @@ puts 'Cloning users'
           user_instrument.skill_level = ['Beginner', 'Intermediate', 'Expert'].sample
           user_instrument.save!
 
-          mediafiles = "#{new_user.username} has no mediafiles yet"
+          pictures = nil
           caption = "Hi, my name is #{new_user.username}. I like to jam !"
-          new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
+          new_post = Post.create!(pictures: pictures, caption: caption, user: new_user)
           puts "User #{new_user.username} created"
+
 # puts 'Done'
+
 puts "creating test chatroom"
 Chatroom.create!(name: 'general')
 puts "all done"
+
+# new_post = Post.create!(caption: caption, user: new_user)
+# new_post.pictures.attach
+
