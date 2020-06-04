@@ -1,24 +1,37 @@
 <%= render 'shared/search' %>
+
 <p><%= @profiles.count %> Profiles</p>
+
 <div class="feed-wrapper">
   <h2>Check out these handsome Profiles:</h2>
   <% @profiles.each do |profile| %>
-  <div class="post-content">
-    <div class="post-header">
-      <%= cl_image_tag profile.photo.key, height: 100, width: 100, crop: :fill, class: 'avatar-small user-image' %>
-      <div class="post-username">
-      <%= profile.username %>
+    <div class="post-content">
+      <div class="post-header">
+        <%= cl_image_tag profile.photo.key, height: 100, width: 100, crop: :fill, class: 'avatar-small user-image' %>
+        <div class="post-username">
+          <%= profile.username %>
+        </div>
       </div>
-    </div>
-    <div class="post-media">
-      <p>Likes: <%= profile.user_genres[0].genre.name %></p>
-    </div>
-    <div class="post-footer d-flex">
-      <p>Plays: <%= profile.user_instruments[0].instrument.name %> </p>
-      <div>
+      <div class="post-media">
+        <% user_genres = @user_genres.where(["User_id = ?", profile.id]) %>
+        <% if user_genres[0] %>
+          <p>Likes: <%= @genres.where(["id = ?", user_genres[0].genre_id])[0].name %></p>
+        <% else %>
+          <p>No genres yet</p>
+        <% end %>
+      </div>
+      <div class="post-footer d-flex">
+        <% user_instruments = @user_instruments.where(["User_id = ?", profile.id]) %>
+        <% if user_instruments[0] %>
+          <p>Plays: <%= @instruments.where(["id = ?", user_instruments[0].instrument_id])[0].name %></p>
+          <p>Skill Level: <%= user_instruments[0].skill_level %></p>
+        <% else %>
+          <p>No instruments yet</p>
+        <% end %>
+        <div>
         <!-- <p>Like</p> <p>Comment</p> -->
+        </div>
       </div>
     </div>
-  </div>
   <% end %>
 </div>
