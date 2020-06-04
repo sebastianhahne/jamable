@@ -5,4 +5,8 @@ class ChatroomsController < ApplicationController
     @message = Message.new
   end
 
+  def create
+
+  end
+
 end
