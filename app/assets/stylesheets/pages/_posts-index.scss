@@ -5,12 +5,19 @@
   margin: auto;
 }
 
+.feed-wrapper h2 {
+  font-size: 20px;
+  margin: 20px 4px;
+}
+
 .post-header {
   display: flex;
-  height: 32px;
-  border: black 1px solid;
-  border-radius: 8px 8px 0px 0px;
+  height: 50px;
+  margin: 4px 0px;
+  // border: black 1px solid;
+  // border-radius: 8px 8px 0px 0px;
   position: relative;
+  align-items: center;
 }
 
 .user-image {
@@ -26,13 +33,19 @@
 
 .post-media {
   height: 160px;
-  border: black 1px solid;
 }
 
-.post-footer {
+.post-footer  {
   height: 32px;
-  border: black 1px solid;
-  border-radius: 0px 0px 8px 8px;
   margin-bottom: 16px;
   padding-left: 4px;
+  border-bottom: grey 0.5px solid;
+}
+
+.post-footer p {
+ width: 85vw;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0px;
 }
