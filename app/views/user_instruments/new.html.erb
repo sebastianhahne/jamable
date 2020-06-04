@@ -8,7 +8,7 @@
         <%= name_form.select(:instrument_id, options_from_collection_for_select(Instrument.all, "id", "name")) %>
       <% end %>
       <hr>
-      <%= f.input :skill_level, as: :select, label: collection: UserInstrument::SKILL_LEVELS %>
+      <%= f.input :skill_level, as: :select, label: "What's your skill-level?", include_blank: false, collection: UserInstrument::SKILL_LEVELS %>
       <%= f.button :submit, "Add instrument", class: "btn-primary w-100" %>
     </div>
   <% end %>
