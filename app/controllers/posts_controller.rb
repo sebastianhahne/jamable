@@ -2,14 +2,15 @@ class PostsController < ApplicationController
   before_action :authenticate_user!
 
   def new
-    @user = User.find(params[:user_id])
-    @post = Posts.new
+    @post = Post.new
   end
 
   def create
-    @user = User.find(params[:user_id])
+    # @user = User.find(params[:user_id])
+    @post = Post.new(post_params)
     @post.user = current_user
     @post.save
+    redirect_to posts_path
   end
 
   def show
@@ -20,4 +21,9 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
+private
+
+  def post_params
+    params.require(:post).permit(:caption, pictures: [])
+  end
 end
