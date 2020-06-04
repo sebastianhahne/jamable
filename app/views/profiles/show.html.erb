@@ -1,22 +1,28 @@
-<div class="feed-wrapper">
-  <h2>Check out these handsome Profiles:</h2>
-  <% @profiles.each do |profile| %>
-  <div class="post-content">
-    <div class="post-header">
-      <%= cl_image_tag profile.photo.key, height: 100, width: 100, crop: :fill, class: 'avatar-small user-image' %>
-      <div class="post-username">
-      <%= profile.username %>
-      </div>
+<%= cl_image_tag @profile.photo.key, crop: :fill, class: 'profile-photo' %>
+
+<div class="profile-wrapper">
+
+  <h3><%= @profile.username %></h3>
+
+  <p><%= @profile.address %> </p>
+
+  <div class="profile-info">
+    <div>
+      <p> Plays: <%= @profile.user_instruments[0].instrument.name %> </p>
     </div>
-    <div class="post-media">
-      <p>Likes: <%= profile.user_genres[0].genre.name %></p>
-    </div>
-    <div class="post-footer d-flex">
-      <p>Plays: <%= profile.user_instruments[0].name %> </p>
-      <div>
-        <!-- <p>Like</p> <p>Comment</p> -->
-      </div>
+    <div>
+      <p> Genres: <%= @profile.user_genres[0].genre.name %> </p>
     </div>
   </div>
-  <% end %>
+
+  <p> Media: </p>
+
+    <div class="media-containers">
+      <div class="media-box"></div>
+      <div class="media-box"></div>
+      <div class="media-box"></div>
+    </div>
+
+  <p> About: </p>
+
 </div>
