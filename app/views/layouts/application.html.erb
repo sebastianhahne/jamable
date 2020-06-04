@@ -15,11 +15,10 @@
 
   <div class="wrapper">
   <%= yield %>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
   <div class="footer-blocker"></div>
   </div>
 
+  <%= render 'shared/flashes' %>
   <%= render 'components/footer' %>
 
 </body>
