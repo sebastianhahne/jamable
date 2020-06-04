@@ -1,0 +1,11 @@
+  <div class="new-post-wrapper">
+    <h2>New post</h2>
+
+    <%= simple_form_for @post do |f| %>
+    <%= f.input :pictures, as: :file, input_html: {multiple: true} %>
+    <%= f.input :caption, placeholder: "Add a caption" %>
+    <%= f.submit "Create Post" %>
+    <% end %>
+
+      <%= link_to 'Back to Homepage', root_path  %>
+  </div>

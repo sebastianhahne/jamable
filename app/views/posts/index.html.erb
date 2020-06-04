@@ -9,7 +9,9 @@
       </div>
     </div>
     <div class="post-media">
-      <p><%= post.mediafiles %></p>
+      <% post.pictures.each do |p| %>
+        <p><%= cl_image_tag p.key %></p>
+      <% end %>
     </div>
     <div class="post-footer d-flex">
       <p><%= post.caption %></p>
