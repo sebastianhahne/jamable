@@ -16,9 +16,10 @@ class UserInstrumentsController < ApplicationController
     @user_instrument.user = current_user
     @user_instrument.instrument = Instrument.find_by(id: params[:user_instrument][:name][:instrument_id])
 
-    # include if statement for redirection of new users
-    if @user_instrument.save
+    if current_user.user_instruments[0].nil? && @user_instrument.save
       redirect_to new_user_genre_path, notice: 'Created new instrument.'
+    elsif @user_instrument.save
+      redirect_to root_path, notice: 'Created new instrument.'
     else
       render :new
     end
