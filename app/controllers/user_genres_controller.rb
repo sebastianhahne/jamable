@@ -16,7 +16,6 @@ class UserGenresController < ApplicationController
     @user_genre.user = current_user
     @user_genre.genre = Genre.find_by(id: params[:user_genre][:name][:genre_id])
 
-    # include if statement for redirection of new users
     if @user_genre.save
       redirect_to root_path, notice: 'Created new genre.'
     else
