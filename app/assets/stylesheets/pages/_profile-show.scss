@@ -1,0 +1,25 @@
+.profile-photo {
+  width: 100vw;
+  height: 35vh;
+}
+
+.profile-wrapper {
+  width: 90vw;
+  margin: auto;
+}
+
+.profile-info {
+  display: flex;
+}
+
+.media-containers {
+  display: flex;
+  justify-content: space-between;
+}
+
+.media-box {
+  width: 31%;
+  height: 60px;
+  border: $white 1px solid;
+  border-radius: 8px 8px 8px 8px;
+}
