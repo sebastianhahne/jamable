@@ -1,0 +1,31 @@
+.search-profiles-wrapper {
+  width: 90vw;
+  margin: auto;
+}
+
+.profile-card {
+  display: flex;
+  background-color: $lblue;
+  border-radius: 8px;
+  align-items: center;
+  height: 132px;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.image {
+  padding-left: 12px;
+}
+
+.profile-details {
+  padding-left: 16px;
+}
+
+.profile-details p {
+  margin-bottom: 0px;
+}
+
+.profile-arrow {
+  position: absolute;
+  right: 16px;
+}
