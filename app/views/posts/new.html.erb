@@ -1,11 +1,12 @@
-  <div class="new-post-wrapper">
-    <h2>New post</h2>
+  <div class="container-signup">
 
     <%= simple_form_for @post do |f| %>
-    <%= f.input :pictures, as: :file, input_html: {multiple: true} %>
-    <%= f.input :caption, placeholder: "Add a caption" %>
-    <%= f.submit "Create Post" %>
+      <div class="signup-wrapper">
+        <h2>New post</h2>
+        <%= f.input :pictures, as: :file, input_html: {multiple: true} %>
+        <%= f.input :caption, as: :text, input_html: {rows: 10}, placeholder: "Add a caption" %>
+        <%= f.button :submit, "Create post", class: "btn-primary w-100" %>
+      </div>
     <% end %>
 
-      <%= link_to 'Back to Homepage', root_path  %>
   </div>
