@@ -613,3 +613,6 @@ puts 'Cloning users'
           new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
           puts "User #{new_user.username} created"
 # puts 'Done'
+puts "creating test chatroom"
+Chatroom.create!(name: 'general')
+puts "all done"
