@@ -1,19 +1,16 @@
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-12">
-      <%= simple_form_for @user_instrument do |f| %>
+<div class="container-signup">
 
-      <h1>Add a new instrument</h1>
-
+  <%= simple_form_for @user_instrument do |f| %>
+    <div class="signup-wrapper">
+      <h2>Add an instrument</h2>
+      <hr>
       <%= f.fields_for :name do |name_form| %>
         <%= name_form.select(:instrument_id, options_from_collection_for_select(Instrument.all, "id", "name")) %>
       <% end %>
-
-      <%= f.input :skill_level, as: :select, collection: UserInstrument::SKILL_LEVELS %>
+      <hr>
+      <%= f.input :skill_level, as: :select, label: collection: UserInstrument::SKILL_LEVELS %>
       <%= f.button :submit, "Add instrument", class: "btn-primary w-100" %>
-
-      <% end %>
-
     </div>
-  </div>
+  <% end %>
+
 </div>
