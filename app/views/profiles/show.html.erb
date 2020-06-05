@@ -1,27 +1,43 @@
-<%= cl_image_tag @profile.photo.key, crop: :fill, class: 'profile-photo' %>
+<div class="image-div">
+  <%= cl_image_tag @profile.photo.key, crop: :fill, class: 'profile-photo' %>
+  <div>
+    <%= link_to '<', profiles_path, class: "back-arrow" %>
+  </div>
+</div>
 
 <div class="profile-wrapper">
 
-  <h3><%= @profile.username %></h3>
-
-  <p><%= @profile.address %> </p>
-
-  <div class="profile-info">
-    <div>
-      <p> Plays: <%= @profile.user_instruments[0].instrument.name %> </p>
+  <% if @profile != current_user %>
+    <div class="profile-buttons">
+      <i class="fas fa-user-plus action-buttons"></i>
+      <i class="fas fa-comments action-buttons"></i>
     </div>
-    <div>
-      <p> Genres: <%= @profile.user_genres[0].genre.name %> </p>
-    </div>
+  <% end %>
+
+  <div class="name-location">
+    <h5> <%= @profile.username %></h5>
+    <p class="body-text"><%= @profile.address %> </p>
   </div>
 
-  <p> Media: </p>
-
-    <div class="media-containers">
-      <div class="media-box"></div>
-      <div class="media-box"></div>
-      <div class="media-box"></div>
+  <div class="profile-info row">
+    <div class="col-6">
+     <p> Instruments: </p> <p class="body-text"> <%= @profile.user_instruments[0].instrument.name %> </p>
     </div>
+    <div class="col-6">
+      <p> Genres: </p> <p class="body-text"> <%= @profile.user_genres[0].genre.name %> </p>
+    </div>
+  </div>
+  <br>
+
+  <div>
+    <p> Media: </p>
+    <div class="media-containers">
+      <div class="media-box"> <i class="fab fa-soundcloud"></i> </div>
+      <div class="media-box"> <i class="fab fa-soundcloud"></i> </div>
+      <div class="media-box"> <i class="fab fa-soundcloud"></i> </div>
+    </div>
+  </div>
+  <br>
 
   <p> About: </p>
 
