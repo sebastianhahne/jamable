@@ -1,11 +1,11 @@
 <div class="feed-wrapper">
-  <h2>Check out these awesome Posts:</h2>
+  <h2>What's been happening...</h2>
   <% @posts.each do |post| %>
   <div class="post-content">
     <div class="post-header">
       <%= cl_image_tag post.user.photo.key, height: 100, width: 100, crop: :fill, class: 'avatar-small user-image' %>
       <div class="post-username">
-        <%= post.user.username %> <p> shared an image </p>
+        <%= post.user.username.capitalize %> <p> shared an image </p>
       </div>
     </div>
     <div class="post-media">

@@ -1,6 +1,7 @@
 .search-profiles-wrapper {
   width: 90vw;
   margin: auto;
+  margin-top: 4px;
 }
 
 .profile-card {
@@ -19,10 +20,14 @@
 
 .profile-details {
   padding-left: 16px;
+  width: 172px
 }
 
 .profile-details p {
   margin-bottom: 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .profile-arrow {
