@@ -1,6 +1,9 @@
 <div class="feed-wrapper">
+  <div class="post-button">
+    <%= link_to '', new_post_path, class: "fas fa-plus-circle" %>
+  </div>
   <h2>What's been happening...</h2>
-  <% @posts.each do |post| %>
+   <% @posts.sort {|a, b| b <=> a}.each do |post| %>
   <div class="post-content">
     <div class="post-header">
       <%= cl_image_tag post.user.photo.key, height: 100, width: 100, crop: :fill, class: 'avatar-small user-image' %>
@@ -26,4 +29,5 @@
 
   </div>
   <% end %>
+
 </div>
