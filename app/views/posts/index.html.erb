@@ -8,15 +8,19 @@
     <div class="post-header">
       <%= cl_image_tag post.user.photo.key, height: 100, width: 100, crop: :fill, class: 'avatar-small user-image' %>
       <div class="post-username">
-        <%= post.user.username.capitalize %> <p> shared an image </p>
+        <%= post.user.username.capitalize %> <p> shared a new post</p>
       </div>
     </div>
     <div class="post-media">
+      <% if post.mediafiles != nil && post.mediafiles != "" %>
+        <% youtube_id = YouTubeAddy.extract_video_id(post.mediafiles) %>
+        <% url = "https://www.youtube.com/embed/#{youtube_id}" %>
+        <iframe class = "post-image" width="372" height="289" src="<%= url %>?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0" frameborder ="0" allowfullscreen></iframe>
+      <%end %>
       <% post.pictures.each do |p| %>
         <%= cl_image_tag p.key, width: 372, class: 'post-image'  %>
       <% end %>
     </div>
-
     <div class="post-footer">
       <div class="caption">
         <p><%= post.caption %></p>
