@@ -51,7 +51,9 @@
   border-radius: 50%;
   padding: 8px;
   margin-left: 8px;
+  background: none;
 }
+
 .follow {
   color: green !important;
   border: green 1px solid !important;
@@ -86,6 +88,10 @@
   left: 12px;
 }
 
+#new_chatroom {
+  padding-top: 4px;
+}
+
 .button-available {
   position: absolute;
   bottom: 12px;
@@ -114,4 +120,4 @@
       color: #d83836;
       text-decoration: none;
   }
-}
+
