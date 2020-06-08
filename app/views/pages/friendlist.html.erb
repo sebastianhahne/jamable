@@ -1,0 +1,18 @@
+<div class="search-profiles-wrapper">
+
+    <h2>Following <%= @following.count %> profiles</h2>
+
+    <% @following.each do |follow| %>
+      <p><%= @users.find(follow.id).username %></p>
+
+    <% end %>
+
+    <hr>
+
+    <h2>You have <%= @followers.count %> followers</h2>
+
+    <% @followers.each do |follower| %>
+      <p><%= @users.find(follower.id).username %></p>
+
+    <% end %>
+  </div>
