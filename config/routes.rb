@@ -22,4 +22,5 @@ Rails.application.routes.draw do
 
   post 'profiles/:id/follow', to: 'profiles#follow', as: :follow
   get 'pages/friendlist', to: 'pages#friendlist', as: :friendlist
+  post 'posts/:id/like', to: 'posts#like', as: :like
 end

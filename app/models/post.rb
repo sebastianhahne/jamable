@@ -6,4 +6,7 @@ class Post < ApplicationRecord
   has_one_attached :audio
 
   validates :caption, presence: true
+
+  # social gem
+  acts_as_likeable
 end
