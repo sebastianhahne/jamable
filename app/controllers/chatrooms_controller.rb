@@ -15,6 +15,8 @@ class ChatroomsController < ApplicationController
 
   def create
     @chatroom = Chatroom.new(chatroom_params)
+    @chatroom.sender = params[:chatroom][:sender]
+    @chatroom.receiver = params[:chatroom][:receiver]
     if @chatroom.save
       respond_to do |format|
         format.html { redirect_to @chatroom }

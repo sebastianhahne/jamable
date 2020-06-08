@@ -1,5 +1,8 @@
 <% @chatrooms.each do |chatroom| %>
-<ul id="chatroom-index">
-  <li><%= link_to chatroom.name, chatroom_path(chatroom) %></li>
-</ul>
+
+  <% if chatroom.sender == current_user.id || chatroom.receiver == current_user.id %>
+  <ul id="chatroom-index">
+    <li><%= link_to chatroom.name, chatroom_path(chatroom) %></li>
+  </ul>
+  <% end %>
 <% end %>
