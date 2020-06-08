@@ -17,16 +17,14 @@ class ChatroomsController < ApplicationController
     @chatroom = Chatroom.new(chatroom_params)
     @chatroom.sender = params[:chatroom][:sender]
     @chatroom.receiver = params[:chatroom][:receiver]
-    if @chatroom.save
+
+    if Chatroom.exists?(name: @chatroom.name)
+      redirect_to chatrooms_path
+    else
+      @chatroom.save
       respond_to do |format|
         format.html { redirect_to @chatroom }
         format.js
-      end
-    else
-      respond_to do |format|
-        flash[:notice] = { error: ["a chatroom with this topic already exists"]}
-        format.html { redirect_to new_chatroom_path }
-        format.js { render template: 'chatrooms/chatroom_error.js.erb'}
       end
     end
   end
@@ -38,4 +36,3 @@ class ChatroomsController < ApplicationController
   end
 
 end
-

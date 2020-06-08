@@ -1,8 +1,27 @@
-<% @chatrooms.each do |chatroom| %>
+<div class="chatwrapper">
+  <% @chatrooms.each do |chatroom| %>
 
-  <% if chatroom.sender == current_user.id || chatroom.receiver == current_user.id %>
-  <ul id="chatroom-index">
-    <li><%= link_to chatroom.name, chatroom_path(chatroom) %></li>
-  </ul>
+    <% if chatroom.sender == current_user.id || chatroom.receiver == current_user.id %>
+      <ul id="chatroom-index">
+        <div>
+          <%= cl_image_tag current_user.photo.key, height: 100, width: 100, crop: :fill, class: 'avatar-small user-image' %>
+        </div>
+        <div>
+          <li><%= link_to chatroom.name, chatroom_path(chatroom), class: "chat-list" %></li>
+          <% if chatroom.messages.last.nil? %>
+            <li> No messages yet... </li>
+          <% else %>
+          <div class="row chatbox">
+            <div class="">
+              <%= chatroom.messages.last.content.truncate(25) %>
+            </div>
+            <div class="">
+              <%= chatroom.messages.last.updated_at.to_s[0..15] %>
+            </div>
+          </div>
+          <% end %>
+        </div>
+      </ul>
+    <% end %>
   <% end %>
-<% end %>
+</div>
