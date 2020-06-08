@@ -4,6 +4,7 @@
       <div class="signup-wrapper">
         <h2>New post</h2>
         <%= f.input :pictures, as: :file, input_html: {multiple: true} %>
+        <%= f.input :mediafiles, as: :text, input_html: {rows: 1}, placeholder: "optional YouTube link" %>
         <%= f.input :caption, as: :text, input_html: {rows: 10}, placeholder: "Add a caption" %>
         <%= f.button :submit, "Create post", class: "btn-primary w-100" %>
       </div>
