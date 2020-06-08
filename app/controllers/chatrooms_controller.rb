@@ -15,7 +15,6 @@ class ChatroomsController < ApplicationController
 
   def create
     @chatroom = Chatroom.new(chatroom_params)
-    raise
     @chatroom.sender = params[:chatroom][:sender]
     @chatroom.receiver = params[:chatroom][:receiver]
 
