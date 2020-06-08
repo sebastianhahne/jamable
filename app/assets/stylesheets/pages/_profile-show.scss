@@ -85,3 +85,33 @@
   top: 12px;
   left: 12px;
 }
+
+.button-available {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background-color: #5cd65c;
+  color: white;
+  border-radius: 4px;
+  padding: 4px 8px;
+  &:hover {
+      color: white;
+      text-decoration: none;
+  }
+}
+
+.button-unavailable {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background-color: transparent;
+  border: #d83836 1px solid;
+  color: #d83836;
+  border-radius: 4px;
+  padding: 4px 8px;
+  text-decoration: none;
+  &:hover {
+      color: #d83836;
+      text-decoration: none;
+  }
+}
