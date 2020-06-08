@@ -58,6 +58,8 @@
 .like-buttons {
   margin-bottom: 12px;
   margin-right: 12px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .caption {
@@ -80,7 +82,8 @@
 .like-count {
   font-size: 10px;
   color: $red;
-  display: inline;
+  margin-bottom: 0;
+  padding-top: 11px;
 }
 
 

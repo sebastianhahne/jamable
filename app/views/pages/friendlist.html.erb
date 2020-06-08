@@ -8,14 +8,14 @@
         <%= cl_image_tag @users.find(follow.id).photo.key %>
         <div class="card-friendlist-infos">
           <h2><%= @users.find(follow.id).username %></h2>
-        </div>
-        <div class="profile-buttons">
-          <% if follow.followed_by?(current_user) %>
-            <%= link_to follow_path(follow), method: :post do %>
-              <i class="fas fa-user-plus"></i>
+          <div class="friendlist-buttons">
+            <% if follow.followed_by?(current_user) %>
+              <%= link_to follow_two_path(follow.id), method: :post do %>
+                <i class="fas fa-heart-broken buttons"></i>
+              <% end %>
             <% end %>
-          <% end %>
-          <i class="fas fa-comments"></i>
+            <i class="fas fa-comments buttons"></i>
+          </div>
         </div>
       </div>
 
@@ -26,7 +26,16 @@
     <h4>You have <%= @followers.count %> followers</h4>
 
     <% @followers.each do |follower| %>
-      <p><%= @users.find(follower.id).username %></p>
+
+      <div class="card-friendlist">
+        <%= cl_image_tag @users.find(follower.id).photo.key %>
+        <div class="card-friendlist-infos">
+          <h2><%= @users.find(follower.id).username %></h2>
+          <div class="friendlist-buttons">
+            <i class="fas fa-comments buttons"></i>
+          </div>
+        </div>
+      </div>
 
     <% end %>
   </div>

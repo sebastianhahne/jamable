@@ -21,6 +21,8 @@ Rails.application.routes.draw do
   # social gem routes
 
   post 'profiles/:id/follow', to: 'profiles#follow', as: :follow
+  post 'pages/friendlist/:id/follow', to: 'pages#follow_two', as: :follow_two
+  # Don't ask questions I'm just lazy
   get 'pages/friendlist', to: 'pages#friendlist', as: :friendlist
   post 'posts/:id/like', to: 'posts#like', as: :like
 end
