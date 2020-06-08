@@ -25,6 +25,7 @@
               <%= link_to 'Add Post', new_post_path, class: "dropdown-item" %>
               <%= link_to 'Add Instrument', new_user_instrument_path, class: "dropdown-item" %>
               <%= link_to 'Add Genre', new_user_genre_path, class: "dropdown-item" %>
+              <%= link_to 'Friends/Followers', friendlist_path, class: "dropdown-item" %>
               <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             </div>
           <% end %>

@@ -18,4 +18,9 @@ Rails.application.routes.draw do
 
   resources :profiles, only: [:index, :show]
 
+  # social gem routes
+
+  post 'profiles/:id/follow', to: 'profiles#follow', as: :follow
+  get 'pages/friendlist', to: 'pages#friendlist', as: :friendlist
+  post 'posts/:id/like', to: 'posts#like', as: :like
 end
