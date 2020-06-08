@@ -3,16 +3,28 @@
   <div>
     <%= link_to '<', profiles_path, class: "back-arrow" %>
   </div>
+  <div class="availability-status">
+    <% if @profile == current_user && @profile.availability %>
+      <%= link_to "Available", toggle_availability_path, method: :patch, class: "button-available"%>
+    <% elsif @profile == current_user %>
+      <%= link_to "Unavailable", toggle_availability_path, method: :patch, class: "button-unavailable" %>
+    <% elsif @profile != current_user && @profile.availability %>
+      <div class="button-available"> Available</div>
+    <% else %>
+    <div class="button-unavailable"> Unavailable </div>
+    <% end %>
+  </div>
 </div>
 
 <div class="profile-wrapper">
 
   <% if @profile != current_user %>
-    <div class="profile-buttons">
-      <i class="fas fa-user-plus action-buttons"></i>
-      <i class="fas fa-comments action-buttons"></i>
-    </div>
+  <div class="profile-buttons">
+    <i class="fas fa-user-plus action-buttons"></i>
+    <i class="fas fa-comments action-buttons"></i>
+  </div>
   <% end %>
+
 
   <div class="name-location">
     <h5> <%= @profile.username %></h5>
@@ -22,23 +34,31 @@
   <div class="profile-info row">
     <div class="col-6">
      <p> Instruments: </p> <p class="body-text"> <%= @profile.user_instruments[0].instrument.name %> </p>
-    </div>
-    <div class="col-6">
-      <p> Genres: </p> <p class="body-text"> <%= @profile.user_genres[0].genre.name %> </p>
-    </div>
+   </div>
+   <div class="col-6">
+    <p> Genres: </p> <p class="body-text"> <%= @profile.user_genres[0].genre.name %> </p>
   </div>
-  <br>
+</div>
+<br>
 
-  <div>
-    <p> Media: </p>
-    <div class="media-containers">
-      <div class="media-box"> <i class="fab fa-soundcloud"></i> </div>
-      <div class="media-box"> <i class="fab fa-soundcloud"></i> </div>
-      <div class="media-box"> <i class="fab fa-soundcloud"></i> </div>
-    </div>
+<div>
+  <p> Media: </p>
+  <div class="media-containers">
+    <div class="media-box"> <i class="fab fa-soundcloud"></i> </div>
+    <div class="media-box"> <i class="fab fa-soundcloud"></i> </div>
+    <div class="media-box"> <i class="fab fa-soundcloud"></i> </div>
   </div>
-  <br>
+</div>
+<br>
 
-  <p> About: </p>
+<p> About: </p>
 
 </div>
+
+<!-- <script>
+  // const toggleAvailability
+  const checkbox = document.getElementById("availability-toggle");
+  checkbox.addEventListener("click", (event) => {
+    available();
+  });
+</script> -->

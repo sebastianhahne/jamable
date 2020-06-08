@@ -16,4 +16,10 @@ class ProfilesController < ApplicationController
       @profiles = User.all
     end
   end
+
+  def available
+    current_user.availability = !current_user.availability
+    current_user.save
+    redirect_to profile_path(current_user)
+  end
 end

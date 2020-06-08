@@ -18,4 +18,6 @@ Rails.application.routes.draw do
 
   resources :profiles, only: [:index, :show]
 
+  patch '/profiles/:id/mark', to: 'profiles#available', as: :toggle_availability
+
 end
