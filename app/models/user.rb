@@ -21,6 +21,7 @@ class User < ApplicationRecord
   has_many :user_genres, dependent: :destroy
   has_many :genres, through: :user_genres
   has_many :messages
+  has_many :conversations
   has_many :chatrooms, through: :messages
   has_many :posts, dependent: :destroy
   has_one_attached :photo

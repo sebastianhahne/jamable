@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_03_160444) do
+ActiveRecord::Schema.define(version: 2020_06_08_130438) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_trgm"
@@ -41,6 +41,18 @@ ActiveRecord::Schema.define(version: 2020_06_03_160444) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "sender"
+    t.integer "receiver"
+  end
+
+  create_table "conversations", force: :cascade do |t|
+    t.string "name"
+    t.string "sender"
+    t.string "receiver"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_conversations_on_user_id"
   end
 
   create_table "friendships", force: :cascade do |t|
@@ -128,6 +140,7 @@ ActiveRecord::Schema.define(version: 2020_06_03_160444) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "conversations", "users"
   add_foreign_key "friendships", "users", column: "asker_id"
   add_foreign_key "friendships", "users", column: "receiver_id"
   add_foreign_key "messages", "chatrooms"

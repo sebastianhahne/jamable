@@ -12,12 +12,12 @@
       <i class="fas fa-user-plus action-buttons"></i>
        <%= form_for @chatroom do |f| %>
         <div class="input-group">
-
-          <%= f.text_field :name, class: "form-control"%>
+          <%= f.hidden_field :receiver, value: @profile.id %>
+          <%= f.hidden_field :sender, value: current_user.id %>
+          <%= f.hidden_field :name, value: "#{current_user.username} jams with #{@profile.username}" %>
         </div>
-          <%= f.submit class: "fas fa-comments action-buttons", id: "chat" %>
+          <%= f.submit class: "fas fa-comments action-buttons", value: "" %>
       <% end %>
-
     </div>
   <% end %>
 
