@@ -1,0 +1,44 @@
+.card-friendlist {
+  overflow: hidden;
+  height: 50px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  background-color: $lblue;
+  margin-bottom: 8px;
+  border-radius: 8px;
+}
+
+.card-friendlist img {
+  height: 100%;
+  width: 60px;
+  object-fit: cover;
+}
+
+.card-friendlist h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-friendlist p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-friendlist .card-friendlist-infos {
+  padding: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.friendlist-buttons {
+  display: flex;
+  justify-content: center;
+  right: -2px;
+  top: -6px;
+}

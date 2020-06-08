@@ -3,42 +3,81 @@
   <div>
     <%= link_to '<', profiles_path, class: "back-arrow" %>
   </div>
+  <div class="availability-status">
+    <% if @profile == current_user && @profile.availability %>
+      <%= link_to "Available", toggle_availability_path, method: :patch, class: "button-available"%>
+    <% elsif @profile == current_user %>
+      <%= link_to "Unavailable", toggle_availability_path, method: :patch, class: "button-unavailable" %>
+    <% elsif @profile != current_user && @profile.availability %>
+      <div class="button-available"> Available</div>
+    <% else %>
+    <div class="button-unavailable"> Unavailable </div>
+    <% end %>
+  </div>
 </div>
 
 <div class="profile-wrapper">
 
   <% if @profile != current_user %>
     <div class="profile-buttons">
-      <i class="fas fa-user-plus action-buttons"></i>
-      <i class="fas fa-comments action-buttons"></i>
+      <% if @profile.followed_by?(current_user) %>
+        <%= link_to follow_path, method: :post do %>
+          <i class="fas fa-user-plus action-buttons"></i>
+        <% end %>
+      <% else %>
+        <%= link_to follow_path, method: :post do %>
+          <i class="fas fa-user-plus action-buttons follow"></i>
+        <% end %>
+      <% end %>
+      <%= form_for @chatroom do |f| %>
+        <%= f.hidden_field :receiver, value: @profile.id %>
+        <%= f.hidden_field :sender, value: current_user.id %>
+        <%= f.hidden_field :name, value: "#{current_user.username} jams with #{@profile.username}" %>
+        <%= f.button class: "fas fa-comments action-buttons", id: "message-button" %>
+      <% end %>
+      <script>document.querySelector("#message-button").innerText = "";</script>
     </div>
   <% end %>
 
-  <div class="name-location">
-    <h5> <%= @profile.username %></h5>
-    <p class="body-text"><%= @profile.address %> </p>
+  <div class="profile-info row">
+    <div class="name-location col-6">
+      <h5> <%= @profile.username %></h5>
+      <p class="body-text"><%= @profile.address %> </p>
+    </div>
+    <div class="col-6">
+      <p>Followers: <%= @profile.followers(User).count  %></p>
+      <p>Follows: <%= @profile.followees(User).count %></p>
+    </div>
   </div>
 
   <div class="profile-info row">
     <div class="col-6">
      <p> Instruments: </p> <p class="body-text"> <%= @profile.user_instruments[0].instrument.name %> </p>
-    </div>
-    <div class="col-6">
-      <p> Genres: </p> <p class="body-text"> <%= @profile.user_genres[0].genre.name %> </p>
-    </div>
+   </div>
+   <div class="col-6">
+    <p> Genres: </p> <p class="body-text"> <%= @profile.user_genres[0].genre.name %> </p>
   </div>
-  <br>
+</div>
+<br>
 
-  <div>
-    <p> Media: </p>
-    <div class="media-containers">
-      <div class="media-box"> <i class="fab fa-soundcloud"></i> </div>
-      <div class="media-box"> <i class="fab fa-soundcloud"></i> </div>
-      <div class="media-box"> <i class="fab fa-soundcloud"></i> </div>
-    </div>
+<div>
+  <p> Media: </p>
+  <div class="media-containers">
+    <div class="media-box"> <i class="fab fa-soundcloud"></i> </div>
+    <div class="media-box"> <i class="fab fa-soundcloud"></i> </div>
+    <div class="media-box"> <i class="fab fa-soundcloud"></i> </div>
   </div>
-  <br>
+</div>
+<br>
 
-  <p> About: </p>
+<p> About: </p>
 
 </div>
+
+<!-- <script>
+  // const toggleAvailability
+  const checkbox = document.getElementById("availability-toggle");
+  checkbox.addEventListener("click", (event) => {
+    available();
+  });
+</script> -->

@@ -1,0 +1,41 @@
+<div class="search-profiles-wrapper">
+
+    <h4>Following <%= @following.count %> profiles</h4>
+
+    <% @following.each do |follow| %>
+
+      <div class="card-friendlist">
+        <%= cl_image_tag @users.find(follow.id).photo.key %>
+        <div class="card-friendlist-infos">
+          <h2><%= @users.find(follow.id).username %></h2>
+          <div class="friendlist-buttons">
+            <% if follow.followed_by?(current_user) %>
+              <%= link_to follow_two_path(follow.id), method: :post do %>
+                <i class="fas fa-heart-broken buttons"></i>
+              <% end %>
+            <% end %>
+            <i class="fas fa-comments buttons"></i>
+          </div>
+        </div>
+      </div>
+
+    <% end %>
+
+    <hr>
+
+    <h4>You have <%= @followers.count %> followers</h4>
+
+    <% @followers.each do |follower| %>
+
+      <div class="card-friendlist">
+        <%= cl_image_tag @users.find(follower.id).photo.key %>
+        <div class="card-friendlist-infos">
+          <h2><%= @users.find(follower.id).username %></h2>
+          <div class="friendlist-buttons">
+            <i class="fas fa-comments buttons"></i>
+          </div>
+        </div>
+      </div>
+
+    <% end %>
+  </div>

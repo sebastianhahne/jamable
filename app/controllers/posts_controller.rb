@@ -30,6 +30,16 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
+  def like
+    @post = Post.find(params[:id])
+    @current_user = current_user
+    if @current_user.toggle_like!(@post)
+      redirect_to posts_path, notice: "You liked #{@post.user.username.capitalize}s post"
+    else
+      redirect_to posts_path, notice: "You unliked #{@post.user.username.capitalize}s post"
+    end
+  end
+
 private
 
   def post_params

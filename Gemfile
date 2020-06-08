@@ -74,3 +74,8 @@ gem 'pg_search', '~> 2.3.0'
 
 #youtube media upload helper
 gem 'youtube_addy'
+
+# social gem
+gem "socialization"
+
+
