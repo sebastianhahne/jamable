@@ -14,6 +14,7 @@
 .profile-info {
   display: flex;
   align-item: left;
+  margin-bottom: 4px;
 }
 
 .media-containers {
@@ -39,6 +40,7 @@
 }
 .profile-buttons {
   position: absolute;
+  z-index: 999;
   right: -2px;
   top: -6px;
 }
@@ -49,6 +51,10 @@
   border-radius: 50%;
   padding: 8px;
   margin-left: 8px;
+}
+.follow {
+  color: green !important;
+  border: green 1px solid !important;
 }
 
 .btn-edit-profile {
