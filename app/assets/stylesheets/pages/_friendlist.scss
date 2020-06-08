@@ -31,4 +31,14 @@
 
 .card-friendlist .card-friendlist-infos {
   padding: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.friendlist-buttons {
+  display: flex;
+  justify-content: center;
+  right: -2px;
+  top: -6px;
 }
