@@ -22,6 +22,7 @@ class ProfilesController < ApplicationController
     current_user.availability = !current_user.availability
     current_user.save
     redirect_to profile_path(current_user)
+  end
 
   def follow
     @user = User.find(params[:id])
@@ -31,7 +32,5 @@ class ProfilesController < ApplicationController
     else
       redirect_to profile_path, notice: "You unfollowed #{@user.username}"
     end
-
   end
 end
-
