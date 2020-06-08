@@ -72,3 +72,6 @@ gem 'cloudinary', '~> 1.12.0'
 #pgsearch setup
 gem 'pg_search', '~> 2.3.0'
 
+# social gem
+gem "socialization"
+

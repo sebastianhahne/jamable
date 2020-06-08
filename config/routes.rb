@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get 'dashboard', to: 'dashboard#overview', as: :dashboard
 
-  resources :chatrooms, only: [:create, :show, :update] do
+  resources :chatrooms, only: [:create, :show, :update, :index] do
     resources :messages, only: [:create]
   end
 
@@ -20,4 +20,9 @@ Rails.application.routes.draw do
 
   patch '/profiles/:id/mark', to: 'profiles#available', as: :toggle_availability
 
+  # social gem routes
+
+  post 'profiles/:id/follow', to: 'profiles#follow', as: :follow
+  get 'pages/friendlist', to: 'pages#friendlist', as: :friendlist
+  post 'posts/:id/like', to: 'posts#like', as: :like
 end
