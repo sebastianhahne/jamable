@@ -2,6 +2,7 @@ class ProfilesController < ApplicationController
 
   def show
     @profile = User.find(params[:id])
+    @chatroom = Chatroom.new
   end
 
   def index
@@ -17,3 +18,4 @@ class ProfilesController < ApplicationController
     end
   end
 end
+
