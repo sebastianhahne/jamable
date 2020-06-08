@@ -9,8 +9,8 @@ class User < ApplicationRecord
   },
   using: {
     tsearch: {
-    prefix: true,
-    dictionary: "english"
+      prefix: true,
+      dictionary: "english"
     },
     trigram: {
     }
@@ -21,6 +21,7 @@ class User < ApplicationRecord
   has_many :user_genres, dependent: :destroy
   has_many :genres, through: :user_genres
   has_many :messages
+  has_many :conversations
   has_many :chatrooms, through: :messages
   has_many :posts, dependent: :destroy
   has_one_attached :photo
@@ -35,5 +36,13 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+  :recoverable, :rememberable, :validatable
+
+  # social gem
+  acts_as_follower
+  acts_as_followable
+  acts_as_liker
+  acts_as_likeable
+  acts_as_mentionable
+  acts_as_mentioner
 end
