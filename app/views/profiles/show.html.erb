@@ -10,7 +10,14 @@
   <% if @profile != current_user %>
     <div class="profile-buttons">
       <i class="fas fa-user-plus action-buttons"></i>
-      <i class="fas fa-comments action-buttons"></i>
+       <%= form_for @chatroom do |f| %>
+        <div class="input-group">
+
+          <%= f.text_field :name, class: "form-control"%>
+        </div>
+          <%= f.submit class: "fas fa-comments action-buttons", id: "chat" %>
+      <% end %>
+
     </div>
   <% end %>
 
