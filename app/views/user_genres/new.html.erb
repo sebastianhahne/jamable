@@ -5,7 +5,10 @@
       <h2>Add a new genre</h2>
       <hr>
       <%= f.fields_for :name do |name_form| %>
-        <%= name_form.select(:genre_id, options_from_collection_for_select(Genre.all, "id", "name")) %>
+
+
+        <%= select_tag "genre_id", options_from_collection_for_select(Genre.all, "id", "name"), class: 'select2' %>
+
       <% end %>
       <hr>
       <%= f.button :submit, "Add genre", class: "btn-primary w-100" %>

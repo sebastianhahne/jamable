@@ -12,9 +12,10 @@ class UserGenresController < ApplicationController
   end
 
   def create
-    @user_genre = UserGenre.new(user_genre_params)
+    @user_genre = UserGenre.new(params[:id])
     @user_genre.user = current_user
-    @user_genre.genre = Genre.find_by(id: params[:user_genre][:name][:genre_id])
+
+    @user_genre.genre = Genre.find_by(id: params[:genre_id])
 
     if @user_genre.save
       redirect_to root_path, notice: 'Created new genre.'
@@ -26,6 +27,6 @@ class UserGenresController < ApplicationController
   private
 
   def user_genre_params
-    params.require(:user_genre).permit({ user_genre_attributes: [:name] })
+    #params.require(:user_genre).permit({ user_genre_attributes: [:name] })
   end
 end
