@@ -39,16 +39,8 @@ ActiveRecord::Schema.define(version: 2020_06_09_103609) do
 
   create_table "chatrooms", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
     t.integer "sender"
     t.integer "receiver"
-  end
-
-  create_table "conversations", force: :cascade do |t|
-    t.string "name"
-    t.string "sender"
-    t.string "receiver"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -177,7 +169,6 @@ ActiveRecord::Schema.define(version: 2020_06_09_103609) do
     t.integer "followers_count", default: 0
     t.integer "likees_count", default: 0
     t.integer "likers_count", default: 0
-    t.integer "mentionees", default: 0
     t.integer "mentioners_count", default: 0
     t.float "latitude"
     t.float "longitude"

@@ -45,7 +45,7 @@
   </div>
   <% end %>
 
-  <div class="profile-info row">
+  <div class="profile-info row margin-fix">
     <div class="name-location col-6">
       <h5> <%= @profile.username %></h5>
       <% address = @profile.address.split(',') %>
@@ -57,7 +57,7 @@
     </div>
   </div>
 
-  <div class="profile-info row">
+  <div class="profile-info row margin-fix">
     <div class="col-6">
       <p> Instruments: </p>
       <% @profile.user_instruments.each do |instrument| %>
@@ -71,7 +71,6 @@
       <% end %>
     </div>
   </div>
-</div>
 <br>
 <div class="feed-wrapper">
 
@@ -98,12 +97,11 @@
       <% post.pictures.each do |p| %>
         <%= cl_image_tag p.key, width: 372, class: 'post-image'  %>
       <% end %>
-    </div>
-    <div class="post-footer">
       <div class="caption">
         <p><%= post.caption %></p>
       </div>
-      <div>
+    </div>
+    <div class="post-footer">
       <div class="like-buttons">
         <% if post.liked_by?(current_user) %>
           <%= link_to like_path(post), method: :post do %>
@@ -115,16 +113,11 @@
           <% end %>
         <% end %>
         <p class="like-count"><%= post.likers_count %></p>
-        <i class="far fa-comment buttons"></i>
       </div>
     </div>
 
   </div>
-</div>
   <% end %>
-
-  
-
 </div>
 
 <!-- <script>
