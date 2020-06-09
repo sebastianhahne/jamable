@@ -17,7 +17,6 @@ class ChatroomsController < ApplicationController
     @chatroom = Chatroom.new(chatroom_params)
     @chatroom.sender = params[:chatroom][:sender].to_i
     @chatroom.receiver = params[:chatroom][:receiver].to_i
-    raise
 
     if Chatroom.exists?(name: @chatroom.name)
       redirect_to chatrooms_path

@@ -37,8 +37,8 @@ Rails.application.configure do
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :cloudinary
-  config.web_socket_server_url = "wss://www.jamable.herokuapp.com/cable"
-  config.action_cable.allowed_request_origins = ['https://www.jamable.herokuapp.com', 'http://www.jamable.herokuapp.com']
+  config.web_socket_server_url = "wss://jamable.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://jamable.herokuapp.com', 'http://jamable.herokuapp.com']
   # Mount Action Cable outside main process or domain.
   # config.action_cable.mount_path = nil
   # config.action_cable.url = 'wss://example.com/cable'
