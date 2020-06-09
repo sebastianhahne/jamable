@@ -78,4 +78,6 @@ gem 'youtube_addy'
 # social gem
 gem "socialization"
 
+# geocoder for addresses
+gem 'geocoder'
 
