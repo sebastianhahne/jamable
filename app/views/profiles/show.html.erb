@@ -48,7 +48,8 @@
   <div class="profile-info row">
     <div class="name-location col-6">
       <h5> <%= @profile.username %></h5>
-      <p class="body-text"><%= @profile.address %> </p>
+      <% address = @profile.address.split(',') %>
+      <p class="body-text"> <%= address[-3] %></p>
     </div>
     <div class="col-6">
       <p>Followers: <%= @profile.followers(User).count %></p>

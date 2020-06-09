@@ -1,5 +1,10 @@
 class User < ApplicationRecord
   include PgSearch::Model
+
+  # for geocoder
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
+
   pg_search_scope :global_search, against: [:username],
   associated_against: {
     instruments: [:name],

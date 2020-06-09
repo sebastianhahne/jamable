@@ -1,5 +1,5 @@
 <div class="container-signup">
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
   <div class="signup-wrapper">
@@ -7,28 +7,38 @@
     <h2>Sign up</h2>
 
     <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
+    required: true,
+    autofocus: true,
+    input_html: { autocomplete: "email" } %>
     <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
+    required: true,
+    hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+    input_html: { autocomplete: "new-password" } %>
     <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
+    required: true,
+    input_html: { autocomplete: "new-password" } %>
     <%= f.input :username,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "username" } %>
+    required: true,
+    autofocus: true,
+    input_html: { autocomplete: "username" } %>
     <%= f.input :photo, as: :file %>
     <%= f.input :address,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "address" } %>
+    required: true,
+    autofocus: true,
+    input_html: { autocomplete: "address", id: "address-field" } %>
     <%= f.button :submit, "Sign up", class: "button btn-primary w-100" %>
-
   </div>
 
-<% end %>
+  <% end %>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/places.js@1.19.0"></script>
+<script>
+  const options = {
+    appId: 'plDTPW1QJ2YW',
+    apiKey: 'b2f723fd13df408e3a53ad2626a509c7',
+    container: document.getElementById('address-field'),
+    type: 'address',
+  };
+  places(options);
+</script>
