@@ -4,8 +4,10 @@
     <div class="signup-wrapper">
       <h2>Add an instrument</h2>
       <hr>
-      <%= f.fields_for :name do |name_form| %>
-        <%= name_form.select(:instrument_id, options_from_collection_for_select(Instrument.all, "id", "name")) %>
+      <%= f.fields_for :name, html: {class: 'select2'} do |name_form| %>
+
+        <%= select_tag "instrument_id", options_from_collection_for_select(Instrument.all, "id", "name"), class: 'select2' %>
+
       <% end %>
       <hr>
       <%= f.input :skill_level, as: :select, label: "What's your skill-level?", include_blank: false, collection: UserInstrument::SKILL_LEVELS %>

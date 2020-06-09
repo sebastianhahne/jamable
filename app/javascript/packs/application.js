@@ -28,7 +28,11 @@ import "bootstrap";
 
 // Internal imports, e.g:
 import { initChatroomCable } from '../channels/chatroom_channel';
+import { initSelect2 } from '../components/init_select2';
+
+initSelect2();
 
 document.addEventListener('turbolinks:load', () => {
   initChatroomCable();
+  initSelect2();
 });
