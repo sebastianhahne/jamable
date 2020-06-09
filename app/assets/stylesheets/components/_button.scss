@@ -18,6 +18,15 @@
   font-size: 32px;
 }
 
+.back-arrow-small {
+  background-color: transparent;
+  border: 2px solid $red;
+  color: $red;
+  border-radius: 50%;
+  padding: 8px 14px;
+  font-size: 16px;
+}
+
 .forward-arrow {
   background-color: transparent;
   border: 2px solid $red;
