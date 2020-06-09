@@ -24,7 +24,7 @@ require("channels")
 
 // External imports
 import "bootstrap";
-import "places";
+// import "places";
 
 // Internal imports, e.g:
 import { initChatroomCable } from '../channels/chatroom_channel';
