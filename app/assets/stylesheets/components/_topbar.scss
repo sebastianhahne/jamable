@@ -1,0 +1,36 @@
+.topbar {
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  height: 60px;
+  background-color: $lblue;
+  z-index: 999;
+  border-bottom: 1px solid $dblue;
+}
+
+.topbar-content {
+  width: 90vw;
+  height: 60px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar-content-messages {
+  width: 90vw;
+  height: 60px;
+  margin: auto;
+  // display: flex;
+  // justify-content: space-between;
+  text-align: center;
+}
+
+.topbar-content-messages h3 {
+  margin-top: 12px;
+}
+
+.searchbar {
+  width: 75vw;
+  margin: 0px;
+}

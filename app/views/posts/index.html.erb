@@ -1,9 +1,15 @@
-<div class="feed-wrapper">
-  <div class="post-button">
-    <%= link_to '', new_post_path, class: "fas fa-plus-circle" %>
+<div class="topbar">
+  <div class="topbar-content">
+    <h3>Jamable</h3>
+    <div class="post-button">
+      <%= link_to '', new_post_path, class: "fas fa-plus-circle" %>
+    </div>
   </div>
+</div>
+
+<div class="feed-wrapper">
   <h2>What's been happening...</h2>
-   <% @posts.sort {|a, b| b <=> a}.each do |post| %>
+  <% @posts.sort {|a, b| b <=> a}.each do |post| %>
   <div class="post-content">
     <div class="post-header">
       <%= link_to (cl_image_tag post.user.photo.key, height: 100, width: 100, crop: :fill, class: 'avatar-small user-image'), profile_path(post.user) %>
@@ -13,19 +19,19 @@
     </div>
     <div class="post-media">
       <% if post.mediafiles != nil && post.mediafiles != "" %>
-        <% youtube_id = YouTubeAddy.extract_video_id(post.mediafiles) %>
-        <% url = "https://www.youtube.com/embed/#{youtube_id}" %>
-        <div class="new-wrapper">
-          <div class="youtube" data-embed="<%= youtube_id %>">
+      <% youtube_id = YouTubeAddy.extract_video_id(post.mediafiles) %>
+      <% url = "https://www.youtube.com/embed/#{youtube_id}" %>
+      <div class="new-wrapper">
+        <div class="youtube" data-embed="<%= youtube_id %>">
           <div class="play-button"></div>
         </div>
-        </div>
+      </div>
 
 
-        <!-- <iframe class = "post-image" width="372" height="289" src="<%= url %>?rel=0&modestbranding=0&autohide=1&showinfo=0&controls=1" frameborder ="0" allowfullscreen></iframe> -->
+      <!-- <iframe class = "post-image" width="372" height="289" src="<%= url %>?rel=0&modestbranding=0&autohide=1&showinfo=0&controls=1" frameborder ="0" allowfullscreen></iframe> -->
       <%end %>
       <% post.pictures.each do |p| %>
-        <%= cl_image_tag p.key, width: 372, class: 'post-image'  %>
+      <%= cl_image_tag p.key, width: 372, class: 'post-image'  %>
       <% end %>
       <div class="caption">
         <%= simple_format(post.caption) %>
@@ -34,13 +40,13 @@
     <div class="post-footer">
       <div class="like-buttons">
         <% if post.liked_by?(current_user) %>
-          <%= link_to like_path(post), method: :post do %>
-            <i class="fas fa-heart buttons"></i>
-          <% end %>
+        <%= link_to like_path(post), method: :post do %>
+        <i class="fas fa-heart buttons"></i>
+        <% end %>
         <% else %>
-          <%= link_to like_path(post), method: :post do %>
-            <i class="far fa-heart buttons"></i>
-          <% end %>
+        <%= link_to like_path(post), method: :post do %>
+        <i class="far fa-heart buttons"></i>
+        <% end %>
         <% end %>
         <p class="like-count"><%= post.likers_count %></p>
       </div>
@@ -52,31 +58,31 @@
 </div>
 
 <script>
-( function() {
+  ( function() {
 
     var youtube = document.querySelectorAll( ".youtube" );
 
     for (var i = 0; i < youtube.length; i++) {
 
-        var source = "https://img.youtube.com/vi/"+ youtube[i].dataset.embed +"/sddefault.jpg";
+      var source = "https://img.youtube.com/vi/"+ youtube[i].dataset.embed +"/sddefault.jpg";
 
-        var image = new Image();
-                image.src = source;
-                image.addEventListener( "load", function() {
-                    youtube[ i ].appendChild( image );
-                }( i ) );
-                youtube[i].addEventListener( "click", function() {
-                    var iframe = document.createElement( "iframe" );
-                            iframe.setAttribute( "frameborder", "0" );
-                            iframe.setAttribute( "width", "372" );
-                            iframe.setAttribute( "height", "289" );
-                            iframe.setAttribute( "src", "https://www.youtube.com/embed/"+ this.dataset.embed +"?rel=0&controls=0&showinfo=0&autoplay=1&autohide=1&modestbranding=1" );
-                            iframe.setAttribute( "style", "font-size:10%");
-                            this.innerHTML = "";
-                            this.appendChild( iframe );
-                } );
+      var image = new Image();
+      image.src = source;
+      image.addEventListener( "load", function() {
+        youtube[ i ].appendChild( image );
+      }( i ) );
+      youtube[i].addEventListener( "click", function() {
+        var iframe = document.createElement( "iframe" );
+        iframe.setAttribute( "frameborder", "0" );
+        iframe.setAttribute( "width", "372" );
+        iframe.setAttribute( "height", "289" );
+        iframe.setAttribute( "src", "https://www.youtube.com/embed/"+ this.dataset.embed +"?rel=0&controls=0&showinfo=0&autoplay=1&autohide=1&modestbranding=1" );
+        iframe.setAttribute( "style", "font-size:10%");
+        this.innerHTML = "";
+        this.appendChild( iframe );
+      } );
     };
 
-} )();
+  } )();
 
 </script>
