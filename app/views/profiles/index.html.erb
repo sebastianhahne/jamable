@@ -11,10 +11,10 @@
           <%= cl_image_tag profile.photo.key, height: 120, width: 120, crop: :fill, class: 'avatar-large' %>
         </div>
         <div class="profile-details">
-           <p> <%= profile.username %> </p>
+           <p><%= profile.username %></p>
            <p> <%= profile.user_instruments[0].instrument.name %> <br> <%= profile.user_genres[0].genre.name %> </p>
         </div>
-           <%= link_to '>', profile_path(profile), class: "btn-arrow forward-arrow" %>
+           <%= link_to '>', profile_path(profile), class: "forward-arrow" %>
       </div>
     <% end %>
 
