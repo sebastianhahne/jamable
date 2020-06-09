@@ -2,18 +2,18 @@
   <% @chatrooms.each do |chatroom| %>
 
     <% if chatroom.sender == current_user.id || chatroom.receiver == current_user.id %>
-      <ul id="chatroom-index">
-        <div>
-          <%= cl_image_tag current_user.photo.key, height: 100, width: 100, crop: :fill, class: 'avatar-small user-image' %>
+      <div id="chatroom-index">
+        <div class= "row">
+          <%= cl_image_tag User.find(chatroom.receiver).photo.key, height: 100, width: 100, crop: :fill, class: 'avatar-small' %>
         </div>
         <div>
-          <li><%= link_to chatroom.name, chatroom_path(chatroom), class: "chat-list" %></li>
+          <strong><%= link_to chatroom.name, chatroom_path(chatroom), class: "chat-list" %></strong>
           <% if chatroom.messages.last.nil? %>
-            <li> No messages yet... </li>
+            <p>No messages yet...</p>
           <% else %>
           <div class="row chatbox">
             <div class="">
-              <%= chatroom.messages.last.content.truncate(25) %>
+              <%= chatroom.messages.last.user.username %>: <%= chatroom.messages.last.content.truncate(25) %>
             </div>
             <div class="">
               <%= chatroom.messages.last.updated_at.to_s[0..15] %>
@@ -21,7 +21,7 @@
           </div>
           <% end %>
         </div>
-      </ul>
+      </div>
     <% end %>
   <% end %>
 </div>

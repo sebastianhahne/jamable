@@ -34,9 +34,11 @@
         <%= f.hidden_field :receiver, value: @profile.id %>
         <%= f.hidden_field :sender, value: current_user.id %>
         <%= f.hidden_field :name, value: "#{current_user.username} jams with #{@profile.username}" %>
-        <%= f.button class: "fas fa-comments action-buttons", id: "message-button" %>
+        <%= button_tag type: 'submit', class: "fas fa-comments action-buttons", id: "register-button" do %>
+          <i class="" aria-hidden="true"></i>
+        <% end %>
       <% end %>
-      <script>document.querySelector("#message-button").innerText = "";</script>
+
     </div>
 
 
@@ -49,7 +51,7 @@
       <p class="body-text"><%= @profile.address %> </p>
     </div>
     <div class="col-6">
-      <p>Followers: <%= @profile.followers(User).count  %></p>
+      <p>Followers: <%= @profile.followers(User).count %></p>
       <p>Follows: <%= @profile.followees(User).count %></p>
     </div>
   </div>
