@@ -118,7 +118,7 @@ ActiveRecord::Schema.define(version: 2020_06_08_122002) do
 
   create_table "posts", force: :cascade do |t|
     t.string "mediafiles"
-    t.string "caption"
+    t.text "caption"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

@@ -44,32 +44,27 @@
 
 .post-footer  {
   display: flex;
-  height: 50px;
+  height: 100%;
   margin-bottom: 16px;
   padding: 16px 8px 0px 8px;
   border-radius: 0px 0px 8px 8px;
   background-color: $lblue;
-  align-items: center;
-  justify-content: space-between;
-  // display: inline;
+  justify-content: flex-end
 }
 
 
 .like-buttons {
-  margin-bottom: 12px;
-  margin-right: 12px;
   display: flex;
-  justify-content: space-between;
 }
 
 .caption {
-  width: 64vw;
+  width: 100%;
   font-weight: lighter;
 }
 
 .caption p {
-  white-space: nowrap;
-  overflow: hidden;
+  // white-space: nowrap;
+  // overflow: hidden;
   text-overflow: ellipsis;
 }
 
