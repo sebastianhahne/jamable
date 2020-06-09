@@ -44,5 +44,4 @@ class User < ApplicationRecord
   acts_as_liker
   acts_as_likeable
   acts_as_mentionable
-  acts_as_mentioner
 end

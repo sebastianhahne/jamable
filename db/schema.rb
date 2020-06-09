@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_08_130438) do
+ActiveRecord::Schema.define(version: 2020_06_08_122002) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_trgm"
@@ -39,16 +39,8 @@ ActiveRecord::Schema.define(version: 2020_06_08_130438) do
 
   create_table "chatrooms", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
     t.integer "sender"
     t.integer "receiver"
-  end
-
-  create_table "conversations", force: :cascade do |t|
-    t.string "name"
-    t.string "sender"
-    t.string "receiver"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -177,7 +169,6 @@ ActiveRecord::Schema.define(version: 2020_06_08_130438) do
     t.integer "followers_count", default: 0
     t.integer "likees_count", default: 0
     t.integer "likers_count", default: 0
-    t.integer "mentionees", default: 0
     t.integer "mentioners_count", default: 0
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
