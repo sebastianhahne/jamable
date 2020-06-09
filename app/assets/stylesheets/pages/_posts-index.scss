@@ -21,7 +21,7 @@
 .user-image {
   position: absolute;
   left: 4px;
-  // top: 4px;
+  top: 4px;
 }
 
 .post-username {
@@ -85,7 +85,10 @@
   margin-bottom: 0;
   padding-top: 11px;
 }
-
+.no-link-deko {
+  text-decoration: none !important;
+  color: $white;
+}
 
 
 

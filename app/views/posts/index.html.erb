@@ -6,9 +6,9 @@
    <% @posts.sort {|a, b| b <=> a}.each do |post| %>
   <div class="post-content">
     <div class="post-header">
-      <%= cl_image_tag post.user.photo.key, height: 100, width: 100, crop: :fill, class: 'avatar-small user-image' %>
+      <%= link_to (cl_image_tag post.user.photo.key, height: 100, width: 100, crop: :fill, class: 'avatar-small user-image'), profile_path(post.user) %>
       <div class="post-username">
-        <%= post.user.username.capitalize %> <p> shared a new post</p>
+        <%= link_to "#{post.user.username.capitalize}", profile_path(post.user), class: 'no-link-deko' %> <p> shared a new post</p>
       </div>
     </div>
     <div class="post-media">
