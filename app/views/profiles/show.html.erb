@@ -3,13 +3,14 @@
   <div>
     <%= link_to '<', profiles_path, class: "back-arrow" %>
   </div>
+
   <div class="availability-status">
     <% if @profile == current_user && @profile.availability %>
-      <%= link_to "Available", toggle_availability_path, method: :patch, class: "button-available"%>
+    <%= link_to "Available", toggle_availability_path, method: :patch, class: "button-available"%>
     <% elsif @profile == current_user %>
-      <%= link_to "Unavailable", toggle_availability_path, method: :patch, class: "button-unavailable" %>
+    <%= link_to "Unavailable", toggle_availability_path, method: :patch, class: "button-unavailable" %>
     <% elsif @profile != current_user && @profile.availability %>
-      <div class="button-available"> Available</div>
+    <div class="button-available"> Available</div>
     <% else %>
     <div class="button-unavailable"> Unavailable </div>
     <% end %>
@@ -37,6 +38,9 @@
       <% end %>
       <script>document.querySelector("#message-button").innerText = "";</script>
     </div>
+    <%= f.submit class: "fas fa-comments action-buttons", value: "" %>
+    <% end %>
+  </div>
   <% end %>
 
   <div class="profile-info row">
@@ -52,25 +56,31 @@
 
   <div class="profile-info row">
     <div class="col-6">
-     <p> Instruments: </p> <p class="body-text"> <%= @profile.user_instruments[0].instrument.name %> </p>
-   </div>
-   <div class="col-6">
-    <p> Genres: </p> <p class="body-text"> <%= @profile.user_genres[0].genre.name %> </p>
+      <p> Instruments: </p>
+      <% @profile.user_instruments.each do |instrument| %>
+      <p class="body-text"> <%= instrument.instrument.name %> </p>
+      <% end %>
+    </div>
+    <div class="col-6">
+      <p> Genres: </p>
+      <% @profile.user_genres.each do |genre| %>
+      <p class="body-text"> <%= genre.genre.name %> </p>
+      <% end %>
+    </div>
   </div>
-</div>
-<br>
+  <br>
 
-<div>
-  <p> Media: </p>
-  <div class="media-containers">
-    <div class="media-box"> <i class="fab fa-soundcloud"></i> </div>
-    <div class="media-box"> <i class="fab fa-soundcloud"></i> </div>
-    <div class="media-box"> <i class="fab fa-soundcloud"></i> </div>
+  <div>
+    <p> Media: </p>
+    <div class="media-containers">
+      <div class="media-box"> <i class="fab fa-soundcloud"></i> </div>
+      <div class="media-box"> <i class="fab fa-soundcloud"></i> </div>
+      <div class="media-box"> <i class="fab fa-soundcloud"></i> </div>
+    </div>
   </div>
-</div>
-<br>
+  <br>
 
-<p> About: </p>
+  <p> About: </p>
 
 </div>
 
