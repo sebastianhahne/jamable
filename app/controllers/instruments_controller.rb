@@ -20,7 +20,6 @@ class InstrumentsController < ApplicationController
 
   def update
     set_instruments
-    @instrument = Instrument.find(params[:id])
     @instrument.update(instrument_params)
     @instrument.save
   end
