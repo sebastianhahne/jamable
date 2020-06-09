@@ -46,12 +46,16 @@
   display: flex;
   height: 100%;
   margin-bottom: 16px;
-  padding: 16px 8px 0px 8px;
+  padding: 4px 8px 0px 8px;
   border-radius: 0px 0px 8px 8px;
   background-color: $lblue;
-  justify-content: flex-end
+  justify-content: flex-end;
+  border-top: 1px dotted $dblue;
 }
-
+.post-content {
+  background-color: $lblue;
+  border-radius: 8px 8px 8px 8px;
+}
 
 .like-buttons {
   display: flex;
@@ -59,6 +63,9 @@
 
 .caption {
   width: 100%;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 8px;
   font-weight: lighter;
 }
 
@@ -66,6 +73,7 @@
   // white-space: nowrap;
   // overflow: hidden;
   text-overflow: ellipsis;
+  margin-bottom: 0;
 }
 
 .buttons {
