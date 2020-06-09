@@ -15,8 +15,9 @@ class ChatroomsController < ApplicationController
 
   def create
     @chatroom = Chatroom.new(chatroom_params)
-    @chatroom.sender = params[:chatroom][:sender]
-    @chatroom.receiver = params[:chatroom][:receiver]
+    @chatroom.sender = params[:chatroom][:sender].to_i
+    @chatroom.receiver = params[:chatroom][:receiver].to_i
+    raise
 
     if Chatroom.exists?(name: @chatroom.name)
       redirect_to chatrooms_path
@@ -32,7 +33,7 @@ class ChatroomsController < ApplicationController
   private
 
   def chatroom_params
-    params.require(:chatroom).permit(:name, :receiver, :sendert)
+    params.require(:chatroom).permit(:name, :receiver, :sender)
   end
 
 end
