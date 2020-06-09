@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: "registrations" }
   root to: 'posts#index'
+  # mount ActionCable.server => '/cable'
 
   get 'dashboard', to: 'dashboard#overview', as: :dashboard
 
