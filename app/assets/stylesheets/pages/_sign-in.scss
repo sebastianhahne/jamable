@@ -1,10 +1,13 @@
 #bg-gradient {
-  background-image: linear-gradient(to bottom right, $dblue, $red);
+  height: 100vh;
+  background-image: linear-gradient(to bottom right, $dblue, #BD2036);
+  overflow: hidden;
 }
 
 .jamable-logo {
   text-align: center;
   margin-bottom: 40px;
+  padding-top: 80px;
 }
 
 .login-button {
@@ -17,4 +20,11 @@
   border: 1px solid white;
   color: white;
   border-radius: 4px;
+  height: 38px;
+  text-align: center;
+  line-height: 36px;
+}
+
+.forgot-password {
+  color: white;
 }
