@@ -38,7 +38,7 @@ puts 'Cloning users'
     u.email = "sebastian.remm@jamable.com"
     u.password = "remm1234"
     u.password_confirmation = "remm1234"
-    u.address = "somewhere in Berlin"
+    u.address = "Brunnenstraße 136, Berlin, Berlin, Deutschland"
     u.username = "Sebi"
     u.photo.attach(io: file, filename: 'sebi.jpeg', content_type: 'image/jpeg')
   end
@@ -57,8 +57,6 @@ puts 'Cloning users'
     user_instrument.save!
 
     mediafiles = nil
-    # caption = "Hi, my name is #{new_user.username}. I like to jam !"
-    caption = "I'm jamming."
     caption = "All music is folk music. I ain’t never heard a horse sing a song."
     new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
     puts "User #{new_user.username} created"
@@ -69,7 +67,7 @@ puts 'Cloning users'
     u.email = "sebastian.hahne@jamable.com"
     u.password = "123456"
     u.password_confirmation = "123456"
-    u.address = "somewhere in Berlin"
+    u.address = "Sonntagstraße 1, Berlin, Berlin, Deutschland"
     u.username = "Basti"
     u.photo.attach(io: file, filename: 'basti.png', content_type: 'image/png')
   end
@@ -89,7 +87,6 @@ puts 'Cloning users'
   user_instrument.save!
 
   mediafiles = nil
-  # caption = "Hi, my name is #{new_user.username}. I like to jam !"
   caption = "I don’t know anything about music, In my line you don’t have to."
   new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
   puts "User #{new_user.username} created"
@@ -100,7 +97,7 @@ puts 'Cloning users'
     u.email = "moritz.kork@jamable.com"
     u.password = "123456"
     u.password_confirmation = "123456"
-    u.address = "somewhere in Berlin"
+    u.address = "Prenzlauer Allee 190, Berlin, Berlin, Deutschland"
     u.username = "Moritz"
     u.photo.attach(io: file, filename: 'moritz.png', content_type: 'image/png')
   end
@@ -119,8 +116,7 @@ puts 'Cloning users'
   user_instrument.save!
 
   mediafiles = nil
-  # caption = "Hi, my name is #{new_user.username}. I like to jam !"
-    caption = "I’m sick to death of people saying we’ve made 11 albums that sound exactly the same. In fact, we’ve made 12 albums that sound exactly the same."
+  caption = "I’m sick to death of people saying we’ve made 11 albums that sound exactly the same. In fact, we’ve made 12 albums that sound exactly the same."
   new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
   puts "User #{new_user.username} created"
 
@@ -130,7 +126,7 @@ puts 'Cloning users'
     u.email = "benj.riethmuller@jamable.com"
     u.password = "123456"
     u.password_confirmation = "123456"
-    u.address = "somewhere in Berlin"
+    u.address = "Kottbusser Damm 12, Berlin, Berlin, Deutschland"
     u.username = "Benj"
     u.photo.attach(io: file, filename: 'benj.jpg', content_type: 'image/jpg')
   end
@@ -149,20 +145,19 @@ puts 'Cloning users'
   user_instrument.save!
 
   mediafiles = nil
-  # caption = "Hi, my name is #{new_user.username}. I like to jam !"
-    caption = "All the good music has already been written by people with wigs and stuff."
+  caption = "All the good music has already been written by people with wigs and stuff."
   new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
   puts "User #{new_user.username} created"
 
-  # creating asil
-    file = URI.open('app/assets/images/users/asil.jpeg')
+  # creating andy
+    file = URI.open('app/assets/images/users/andy.png')
     new_user = User.new do |u|
-      u.email = "asil@jamable.com"
+      u.email = "andy@jamable.com"
       u.password = "123456"
       u.password_confirmation = "123456"
-      u.address = "somewhere in Berlin"
-      u.username = "Asil"
-      u.photo.attach(io: file, filename: 'asil.jpeg', content_type: 'image/jpeg')
+      u.address = "Rudi-Dutschke-Straße 26, Berlin, Berlin, Deutschland"
+      u.username = "Andy"
+      u.photo.attach(io: file, filename: 'andy.png', content_type: 'image/png')
     end
     new_user.save!
     user_genre = UserGenre.new
@@ -179,7 +174,6 @@ puts 'Cloning users'
     user_instrument.save!
 
     mediafiles = nil
-    # caption = "Hi, my name is #{new_user.username}. I like to jam !"
     caption = "There are two kinds of artists left: those who endorse Pepsi and those who simply won’t."
     new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
     puts "User #{new_user.username} created"
@@ -190,7 +184,7 @@ puts 'Cloning users'
         u.email = "carina@jamable.com"
         u.password = "123456"
         u.password_confirmation = "123456"
-        u.address = "somewhere in Berlin"
+        u.address = "Rudi-Dutschke-Straße 26, Berlin, Berlin, Deutschland"
         u.username = "Carina"
         u.photo.attach(io: file, filename: 'carina.jpeg', content_type: 'image/jpeg')
       end
@@ -219,8 +213,8 @@ puts 'Cloning users'
           u.email = "clement@jamable.com"
           u.password = "123456"
           u.password_confirmation = "123456"
-          u.address = "somewhere in Berlin"
-          u.username = "clement"
+          u.address = "Rudi-Dutschke-Straße 26, Berlin, Berlin, Deutschland"
+          u.username = "Clement"
           u.photo.attach(io: file, filename: 'clement.jpeg', content_type: 'image/jpeg')
         end
         new_user.save!
@@ -238,7 +232,6 @@ puts 'Cloning users'
         user_instrument.save!
 
         mediafiles = nil
-        # caption = "Hi, my name is #{new_user.username}. I like to jam !"
         caption = "I don’t deserve a Songwriters Hall of Fame Award. But fifteen years ago, I had a brain operation and I didn’t deserve that, either. So I’ll keep it!"
         new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
         puts "User #{new_user.username} created"
@@ -249,7 +242,7 @@ puts 'Cloning users'
             u.email = "felix@jamable.com"
             u.password = "123456"
             u.password_confirmation = "123456"
-            u.address = "somewhere in Berlin"
+            u.address = "Rudi-Dutschke-Straße 26, Berlin, Berlin, Deutschland"
             u.username = "Felix"
             u.photo.attach(io: file, filename: 'felix.jpeg', content_type: 'image/jpeg')
           end
@@ -268,20 +261,19 @@ puts 'Cloning users'
           user_instrument.save!
 
           mediafiles = nil
-          # caption = "Hi, my name is #{new_user.username}. I like to jam !"
           caption = "I’d rather be a musician than a rock star."
           new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
           puts "User #{new_user.username} created"
 
-        # creating jasmin
-          file = URI.open('app/assets/images/users/jasmin.jpeg')
+        # creating Stefan
+          file = URI.open('app/assets/images/users/stefan.png')
           new_user = User.new do |u|
-            u.email = "jasmin@jamable.com"
+            u.email = "stefan@jamable.com"
             u.password = "123456"
             u.password_confirmation = "123456"
-            u.address = "somewhere in Berlin"
-            u.username = "Jasmin"
-            u.photo.attach(io: file, filename: 'jasmin.jpeg', content_type: 'image/jpeg')
+            u.address = "Rudi-Dutschke-Straße 26, Berlin, Berlin, Deutschland"
+            u.username = "Stefan"
+            u.photo.attach(io: file, filename: 'stefan.png', content_type: 'image/png')
           end
           new_user.save!
           user_genre = UserGenre.new
@@ -298,7 +290,6 @@ puts 'Cloning users'
           user_instrument.save!
 
           mediafiles = nil
-          # caption = "Hi, my name is #{new_user.username}. I like to jam !"
           caption = "I smash guitars because I like them."
           new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
           puts "User #{new_user.username} created"
@@ -309,7 +300,7 @@ puts 'Cloning users'
             u.email = "jorge@jamable.com"
             u.password = "123456"
             u.password_confirmation = "123456"
-            u.address = "somewhere in Berlin"
+            u.address = "Rudi-Dutschke-Straße 26, Berlin, Berlin, Deutschland"
             u.username = "Jorge"
             u.photo.attach(io: file, filename: 'jorge.jpeg', content_type: 'image/jpeg')
           end
@@ -328,18 +319,17 @@ puts 'Cloning users'
           user_instrument.save!
 
           mediafiles = nil
-          # caption = "Hi, my name is #{new_user.username}. I like to jam !"
           caption = "I never had much interest in the piano until I realized that every time I played, a girl would appear on the piano bench to my left and another to my right."
           new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
           puts "User #{new_user.username} created"
 
-                  # creating leo
+          # creating leo
           file = URI.open('app/assets/images/users/leo.jpeg')
           new_user = User.new do |u|
             u.email = "leo@jamable.com"
             u.password = "123456"
             u.password_confirmation = "123456"
-            u.address = "somewhere in Berlin"
+            u.address = "Rudi-Dutschke-Straße 26, Berlin, Berlin, Deutschland"
             u.username = "Leo"
             u.photo.attach(io: file, filename: 'leo.jpeg', content_type: 'image/jpeg')
           end
@@ -358,19 +348,18 @@ puts 'Cloning users'
           user_instrument.save!
 
           mediafiles = nil
-          # caption = "Hi, my name is #{new_user.username}. I like to jam !"
           caption = "It’s easy to play any musical instrument: all you have to do is touch the right key at the right time and the instrument will play itself."
 
           new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
           puts "User #{new_user.username} created"
 
-                  # creating leon
+          # creating leon
           file = URI.open('app/assets/images/users/leon.jpeg')
           new_user = User.new do |u|
             u.email = "leon@jamable.com"
             u.password = "123456"
             u.password_confirmation = "123456"
-            u.address = "somewhere in Berlin"
+            u.address = "Rudi-Dutschke-Straße 26, Berlin, Berlin, Deutschland"
             u.username = "Leon"
             u.photo.attach(io: file, filename: 'leon.jpeg', content_type: 'image/jpeg')
           end
@@ -389,18 +378,17 @@ puts 'Cloning users'
           user_instrument.save!
 
           mediafiles = nil
-          # caption = "Hi, my name is #{new_user.username}. I like to jam !"
           caption = "Let me be clear about this: I don’t have a drug problem, I have a police problem."
           new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
           puts "User #{new_user.username} created"
 
-                  # creating leon_k
+          # creating leon_k
           file = URI.open('app/assets/images/users/leon_k.jpeg')
           new_user = User.new do |u|
             u.email = "leon_k@jamable.com"
             u.password = "123456"
             u.password_confirmation = "123456"
-            u.address = "somewhere in Berlin"
+            u.address = "Rudi-Dutschke-Straße 26, Berlin, Berlin, Deutschland"
             u.username = "Leon_k"
             u.photo.attach(io: file, filename: 'leon_k.jpeg', content_type: 'image/jpeg')
           end
@@ -419,20 +407,19 @@ puts 'Cloning users'
           user_instrument.save!
 
           mediafiles = nil
-          # caption = "Hi, my name is #{new_user.username}. I like to jam !"
           caption = "If you’re listening to a rock star to get your information on who to vote for, you’re a bigger moron than they are."
           new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
           puts "User #{new_user.username} created"
 
-                  # creating liz
-          file = URI.open('app/assets/images/users/liz.jpeg')
+          # creating Max
+          file = URI.open('app/assets/images/users/max.png')
           new_user = User.new do |u|
-            u.email = "liz@jamable.com"
+            u.email = "max@jamable.com"
             u.password = "123456"
             u.password_confirmation = "123456"
-            u.address = "somewhere in Berlin"
-            u.username = "Liz"
-            u.photo.attach(io: file, filename: 'liz.jpeg', content_type: 'image/jpeg')
+            u.address = "Rudi-Dutschke-Straße 26, Berlin, Berlin, Deutschland"
+            u.username = "Max"
+            u.photo.attach(io: file, filename: 'max.png', content_type: 'image/png')
           end
           new_user.save!
           user_genre = UserGenre.new
@@ -449,19 +436,18 @@ puts 'Cloning users'
           user_instrument.save!
 
           mediafiles = nil
-          # caption = "Hi, my name is #{new_user.username}. I like to jam !"
           caption = "Talking about music is like dancing about architecture."
           new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
           puts "User #{new_user.username} created"
 
-                  # creating matt
+          # creating matt
           file = URI.open('app/assets/images/users/matt.jpeg')
           new_user = User.new do |u|
             u.email = "matt@jamable.com"
             u.password = "123456"
             u.password_confirmation = "123456"
-            u.address = "somewhere in Berlin"
-            u.username = "matt"
+            u.address = "Rudi-Dutschke-Straße 26, Berlin, Berlin, Deutschland"
+            u.username = "Matt"
             u.photo.attach(io: file, filename: 'matt.jpeg', content_type: 'image/jpeg')
           end
           new_user.save!
@@ -479,18 +465,17 @@ puts 'Cloning users'
           user_instrument.save!
 
           mediafiles = nil
-          # caption = "Hi, my name is #{new_user.username}. I like to jam !"
           caption = "Too many pieces of music finish too long after the end."
           new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
           puts "User #{new_user.username} created"
 
-                  # creating monti
+          # creating monti
           file = URI.open('app/assets/images/users/monti.jpeg')
           new_user = User.new do |u|
             u.email = "monti@jamable.com"
             u.password = "123456"
             u.password_confirmation = "123456"
-            u.address = "somewhere in Berlin"
+            u.address = "Rudi-Dutschke-Straße 26, Berlin, Berlin, Deutschland"
             u.username = "monti"
             u.photo.attach(io: file, filename: 'monti.jpeg', content_type: 'image/jpeg')
           end
@@ -509,20 +494,19 @@ puts 'Cloning users'
           user_instrument.save!
 
           mediafiles = nil
-          # caption = "Hi, my name is #{new_user.username}. I like to jam !"
           caption = "To listen is an effort, and just to hear is no merit. A duck hears also."
           new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
           puts "User #{new_user.username} created"
 
-          # creating ryan
-            file = URI.open('app/assets/images/users/ryan.jpeg')
+          # creating Yann
+            file = URI.open('app/assets/images/users/yann.png')
             new_user = User.new do |u|
-              u.email = "ryan@jamable.com"
+              u.email = "yann@jamable.com"
               u.password = "123456"
               u.password_confirmation = "123456"
-              u.address = "somewhere in Berlin"
-              u.username = "ryan"
-              u.photo.attach(io: file, filename: 'ryan.jpeg', content_type: 'image/jpeg')
+              u.address = "Rudi-Dutschke-Straße 26, Berlin, Berlin, Deutschland"
+              u.username = "Yann"
+              u.photo.attach(io: file, filename: 'yann.png', content_type: 'image/png')
             end
             new_user.save!
             user_genre = UserGenre.new
@@ -539,12 +523,11 @@ puts 'Cloning users'
             user_instrument.save!
 
             mediafiles = nil
-            # caption = "Hi, my name is #{new_user.username}. I like to jam !"
             caption = "There’s nothing like the eureka moment of knocking off a song that didn’t exist before – I won’t compare it to sex, but it lasts longer."
             new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
             puts "User #{new_user.username} created"
 
-                    # creating santi
+          # creating santi
           file = URI.open('app/assets/images/users/santi.jpeg')
           new_user = User.new do |u|
             u.email = "santi@jamable.com"
@@ -569,20 +552,19 @@ puts 'Cloning users'
           user_instrument.save!
 
           mediafiles = nil
-          # caption = "Hi, my name is #{new_user.username}. I like to jam !"
           caption = "Jazz is not dead, it just smells funny."
           new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
           puts "User #{new_user.username} created"
 
-                  # creating sina
-          file = URI.open('app/assets/images/users/sina.jpeg')
+          # creating Enno
+          file = URI.open('app/assets/images/users/enno.png')
           new_user = User.new do |u|
-            u.email = "sina@jamable.com"
+            u.email = "enno@jamable.com"
             u.password = "123456"
             u.password_confirmation = "123456"
-            u.address = "somewhere in Berlin"
-            u.username = "sina"
-            u.photo.attach(io: file, filename: 'sina.jpeg', content_type: 'image/jpeg')
+            u.address = "Rudi-Dutschke-Straße 26, Berlin, Berlin, Deutschland"
+            u.username = "Enno"
+            u.photo.attach(io: file, filename: 'enno.png', content_type: 'image/png')
           end
           new_user.save!
           user_genre = UserGenre.new
@@ -599,12 +581,11 @@ puts 'Cloning users'
           user_instrument.save!
 
           mediafiles = nil
-          # caption = "Hi, my name is #{new_user.username}. I like to jam !"
           caption = "Competitions are for horses, not artists."
           new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
           puts "User #{new_user.username} created"
 
-                  # creating valerie
+          # creating valerie
           file = URI.open('app/assets/images/users/valerie.jpeg')
           new_user = User.new do |u|
             u.email = "valerie@jamable.com"
@@ -628,19 +609,12 @@ puts 'Cloning users'
           user_instrument.skill_level = ['Beginner', 'Intermediate', 'Expert'].sample
           user_instrument.save!
 
-          pictures = nil
-          # caption = "Hi, my name is #{new_user.username}. I like to jam !"
+          mediafiles = nil
           caption = "After I saw Jimmy play, I just went home and wondered what the f*** I was going to do with my life."
-
-          new_post = Post.create!(pictures: pictures, caption: caption, user: new_user)
+          new_post = Post.create!(mediafiles: mediafiles, caption: caption, user: new_user)
           puts "User #{new_user.username} created"
 
-# puts 'Done'
 
 puts "destroying chatrooms"
 Chatroom.destroy_all
 puts "all done"
-
-# new_post = Post.create!(caption: caption, user: new_user)
-# new_post.pictures.attach
-
