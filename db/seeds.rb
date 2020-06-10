@@ -639,8 +639,6 @@ puts 'Cloning users'
 
 puts "destroying chatrooms"
 Chatroom.destroy_all
-puts "creating test chatroom"
-Chatroom.create!(name: 'general')
 puts "all done"
 
 # new_post = Post.create!(caption: caption, user: new_user)
