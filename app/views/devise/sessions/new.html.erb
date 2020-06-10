@@ -1,4 +1,4 @@
-<div id="bg-gradient">
+<div id="bg-gradient" onmouseover="document.body.style.overflow='hidden';">
 
 <div class="jamable-logo">
   <%= cl_image_tag ('https://res.cloudinary.com/benjriethmuller/image/upload/v1591780198/Jamable_Logo_Main_Red_g6sabr.png'), width: 250 %>
@@ -8,7 +8,7 @@
 
   <div class="form-inputs login-form">
 
-    <h2>Log in</h2>
+    <h3>Log in</h3>
 
     <%= f.input :email,
                 required: false,
