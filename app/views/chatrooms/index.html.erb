@@ -11,15 +11,15 @@
       <div id="chatroom-index">
         <div class= "row">
           <%= cl_image_tag User.find(chatroom.receiver).photo.key, height: 100, width: 100, crop: :fill, class: 'avatar-small' %>
-        </div>
-        <div>
+        </div >
+        <div class= "chatlink">
           <strong><%= link_to chatroom.name, chatroom_path(chatroom), class: "chat-list" %></strong>
           <% if chatroom.messages.last.nil? %>
             <p>No messages yet...</p>
           <% else %>
           <div class="row chatbox">
             <div class="">
-              <%= chatroom.messages.last.user.username %>: <%= chatroom.messages.last.content.truncate(25) %>
+              <%= chatroom.messages.last.user.username %>: <%= chatroom.messages.last.content.truncate(20) %>
             </div>
             <div class="">
               <%= chatroom.messages.last.updated_at.to_s[0..15] %>
