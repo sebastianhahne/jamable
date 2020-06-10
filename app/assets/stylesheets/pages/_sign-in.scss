@@ -1,0 +1,20 @@
+#bg-gradient {
+  background-image: linear-gradient(to bottom right, $dblue, $red);
+}
+
+.jamable-logo {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.login-button {
+  color: white;
+  background-color: $red;
+  border-radius: 4px;
+}
+
+.signup-button {
+  border: 1px solid white;
+  color: white;
+  border-radius: 4px;
+}
