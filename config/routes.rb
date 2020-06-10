@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   post 'pages/friendlist/:id/follow', to: 'pages#follow_two', as: :follow_two
   # Don't ask questions I'm just lazy
   get 'pages/friendlist', to: 'pages#friendlist', as: :friendlist
+  # I said no questions...
   post 'posts/:id/like', to: 'posts#like', as: :like
-  post 'profiles/:id/posts/:id/like', to: 'posts#like_two', as: :like_two
+  post 'profiles/:profile_id/posts/:id/like', to: 'posts#like_two', as: :like_two
 end
