@@ -24,6 +24,11 @@ require("channels")
 
 // External imports
 import "bootstrap";
+import lozad from 'lozad'; //lazy loading javascript modules
+
+const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+observer.observe();
+
 import "places.js";
 
 // Internal imports, e.g:
