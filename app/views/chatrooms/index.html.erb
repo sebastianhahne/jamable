@@ -15,7 +15,9 @@
         <div class= "chatlink">
           <strong><%= link_to chatroom.name, chatroom_path(chatroom), class: "chat-list" %></strong>
           <% if chatroom.messages.last.nil? %>
-            <p>No messages yet...</p>
+            <div class="row chatbox">
+              No messages yet...
+            </div>
           <% else %>
           <div class="row chatbox">
             <div class="">

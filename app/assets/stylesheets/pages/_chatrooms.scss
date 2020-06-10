@@ -3,12 +3,15 @@
   margin: 10px;
   display: flex;
   margin-left: 20px;
+  background-color: $lblue;
+  border-radius: 8px;
 }
 
 .chatbox {
   justify-content: space-between;
   padding: 0 15px;
   font-size: 12px;
+  margin-right: 1px;
 }
 
 .chat-list {
@@ -19,11 +22,10 @@
   margin: 0px 12px;
   overflow: hidden;
   margin-top: 68px;
-  background-color: $lblue;
-  border-radius: 8px;
+
 }
 
 .chatlink {
-  margin-left: 22px;
+  padding-left: 22px;
   width: 100%;
 }
