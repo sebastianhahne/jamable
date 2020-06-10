@@ -17,6 +17,7 @@
   position: relative;
   align-items: center;
   background-color: $lblue;
+  // border-bottom: 1px solid $dblue;
 }
 
 .user-image {
@@ -51,7 +52,7 @@
   border-radius: 0px 0px 8px 8px;
   background-color: $lblue;
   justify-content: flex-end;
-  border-top: 1px dotted $dblue;
+  // border-top: 1px solid $dblue;
 }
 .post-content {
   background-color: $lblue;
@@ -60,6 +61,7 @@
 
 .like-buttons {
   display: flex;
+  padding-bottom: 6px;
 }
 
 .caption {
@@ -74,7 +76,7 @@
   // white-space: nowrap;
   // overflow: hidden;
   text-overflow: ellipsis;
-  margin-bottom: 0;
+  margin-bottom: 4px;
 }
 
 .buttons {
