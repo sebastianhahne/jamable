@@ -34,7 +34,7 @@ class PostsController < ApplicationController
     def index
       @posts = Post.all
     end
-
+  
     def like
       @post = Post.find(params[:id])
       @current_user = current_user
@@ -45,9 +45,21 @@ class PostsController < ApplicationController
       end
     end
 
-    private
+  # No questions! I'm lazy...
 
-    def post_params
-      params.require(:post).permit(:mediafiles, :caption, pictures: [])
+  def like_two
+    @post = Post.find(params[:id])
+    @current_user = current_user
+    if @current_user.toggle_like!(@post)
+      redirect_to profile_path, notice: "You liked #{@post.user.username.capitalize}s post"
+    else
+      redirect_to profile_path, notice: "You unliked #{@post.user.username.capitalize}s post"
     end
   end
+
+private
+
+  def post_params
+    params.require(:post).permit(:mediafiles, :caption, pictures: [])
+  end
+end

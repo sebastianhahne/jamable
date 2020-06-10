@@ -29,7 +29,7 @@ import lozad from 'lozad'; //lazy loading javascript modules
 const observer = lozad(); // lazy loads elements with default selector as '.lozad'
 observer.observe();
 
-// import "places";
+import "places.js";
 
 // Internal imports, e.g:
 import { initChatroomCable } from '../channels/chatroom_channel';

@@ -15,11 +15,13 @@
     <div class="image">
       <%= cl_image_tag profile.photo.key, height: 120, width: 120, crop: :fill, class: 'avatar-large' %>
     </div>
-    <div class="profile-details">
-     <p><%= profile.username %></p>
-     <p> <%= profile.user_instruments[0].instrument.name %> <br> <%= profile.user_genres[0].genre.name %> </p>
+    <div class="row">
+    <div class="profile-details col-12">
+     <p><strong><%= profile.username %></strong></p>
+     <p class="font-fix"> <%= profile.user_instruments[0].instrument.name %> <br> <%= profile.user_genres[0].genre.name %> </p>
    </div>
-   <%= link_to '>', profile_path(profile), class: "forward-arrow" %>
+   <%= link_to '>', profile_path(profile), class: "forward-arrow col-3" %>
+ </div>
  </div>
  <% end %>
 

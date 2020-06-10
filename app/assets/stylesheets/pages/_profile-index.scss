@@ -28,7 +28,11 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-weight: lighter
+  font-weight: lighter;
+  margin-left: 4px;
+}
+.font-fix {
+  font-size: 13px;
 }
 
 .profile-arrow {

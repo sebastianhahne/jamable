@@ -17,7 +17,7 @@ class ChatroomsController < ApplicationController
     @chatroom = Chatroom.new(chatroom_params)
     @chatroom.sender = params[:chatroom][:sender].to_i
     @chatroom.receiver = params[:chatroom][:receiver].to_i
-    if Chatroom.exists?(name: @chatroom.name)
+    if chatroom_exists?
       redirect_to chatrooms_path
     else
       @chatroom.save
@@ -26,6 +26,16 @@ class ChatroomsController < ApplicationController
         format.js
       end
     end
+  end
+
+  def chatroom_exists?
+    condition1 = Chatroom.find_by(sender: @chatroom.sender, receiver: @chatroom.receiver)
+    condition2 = Chatroom.find_by(sender: @chatroom.receiver, receiver: @chatroom.sender)
+    condition1.nil? || condition2.nil? ? false : true
+
+  end
+
+  def find_chatroom
   end
 
   private
