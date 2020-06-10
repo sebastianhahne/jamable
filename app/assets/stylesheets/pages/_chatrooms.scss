@@ -1,11 +1,14 @@
 #chatroom-index {
   list-style-type: none;
   margin: 10px;
+  display: flex;
+  margin-left: 20px;
 }
 
 .chatbox {
   justify-content: space-between;
-  padding-left: 15px;
+  padding: 0 15px;
+  font-size: 12px;
 }
 
 .chat-list {
@@ -13,5 +16,14 @@
 }
 
 .chatwrapper {
-  margin: 4px 12px;
+  margin: 0px 12px;
+  overflow: hidden;
+  margin-top: 68px;
+  background-color: $lblue;
+  border-radius: 8px;
+}
+
+.chatlink {
+  margin-left: 22px;
+  width: 100%;
 }
