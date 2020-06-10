@@ -39,8 +39,8 @@ ActiveRecord::Schema.define(version: 2020_06_09_103609) do
 
   create_table "chatrooms", force: :cascade do |t|
     t.string "name"
-    t.integer "sender"
-    t.integer "receiver"
+    t.integer "sender", default: 0
+    t.integer "receiver", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
