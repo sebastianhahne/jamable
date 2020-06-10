@@ -28,4 +28,5 @@ Rails.application.routes.draw do
   # Don't ask questions I'm just lazy
   get 'pages/friendlist', to: 'pages#friendlist', as: :friendlist
   post 'posts/:id/like', to: 'posts#like', as: :like
+  post 'profiles/:id/posts/:id/like', to: 'posts#like_two', as: :like_two
 end
