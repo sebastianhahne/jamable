@@ -18,7 +18,7 @@ class UserGenresController < ApplicationController
     @user_genre.genre = Genre.find_by(id: params[:genre_id])
 
     if @user_genre.save
-      redirect_to root_path, notice: 'Created new genre.'
+      redirect_to profile_path(current_user), notice: 'Created new genre.'
     else
       render :new
     end
