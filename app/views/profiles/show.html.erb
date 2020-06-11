@@ -93,7 +93,7 @@
       <% if post.mediafiles != nil && post.mediafiles != "" %>
         <% youtube_id = YouTubeAddy.extract_video_id(post.mediafiles) %>
         <% url = "https://www.youtube.com/embed/#{youtube_id}" %>
-        <iframe class = "post-image" width="372" height="289" src="<%= url %>?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0" frameborder ="0" allowfullscreen></iframe>
+        <iframe class = "post-image lozad" width="100%" data-src="<%= url %>?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0" frameborder ="0" allowfullscreen></iframe>
       <%end %>
       <% post.pictures.each do |p| %>
         <%= cl_image_tag p.key, width: 372, class: 'post-image'  %>
