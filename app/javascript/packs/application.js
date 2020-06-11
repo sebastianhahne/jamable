@@ -28,8 +28,6 @@ require("channels")
 import "bootstrap";
 import lozad from 'lozad'; //lazy loading javascript modules
 
-const observer = lozad(); // lazy loads elements with default selector as '.lozad'
-observer.observe();
 
 import "places.js";
 
@@ -37,9 +35,14 @@ import "places.js";
 import { initChatroomCable } from '../channels/chatroom_channel';
 import { initSelect2 } from '../components/init_select2';
 
-initSelect2();
-
 document.addEventListener('turbolinks:load', () => {
   initChatroomCable();
   initSelect2();
+
+  const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+  observer.observe();
+
+
 });
+
+
