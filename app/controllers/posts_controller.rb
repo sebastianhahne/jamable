@@ -39,9 +39,6 @@ class PostsController < ApplicationController
       @post = Post.find(params[:id])
       @current_user = current_user
       if @current_user.toggle_like!(@post)
-        # redirect_to posts_path, notice: "You liked #{@post.user.username.capitalize}s post"
-      else
-        # redirect_to posts_path, notice: "You unliked #{@post.user.username.capitalize}s post"
       end
     end
 
@@ -51,11 +48,6 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @current_user = current_user
     if @current_user.toggle_like!(@post)
-      # redirect_to profile_path(@post.user), notice: "You liked #{@post.user.username.capitalize}s post"
-      # redirect_to posts_path(@post.user, anchor: "post-#{@post.id + 1}" , notice: "You liked #{@post.user.username.capitalize}s post")
-    else
-      # redirect_to profile_path(@post.user), notice: "You unliked #{@post.user.username.capitalize}s post"
-      # redirect_to posts_path(@post.user, anchor: "post-#{@post.id + 1}" , notice: "You unliked #{@post.user.username.capitalize}s post")
     end
   end
 
