@@ -36,8 +36,6 @@ import { initChatroomCable } from '../channels/chatroom_channel';
 import { initSelect2 } from '../components/init_select2';
 import { ajaxLikes } from '../components/ajax_likes';
 
-initSelect2();
-
 document.addEventListener('turbolinks:load', () => {
   initChatroomCable();
   initSelect2();
