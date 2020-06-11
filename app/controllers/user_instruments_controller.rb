@@ -19,7 +19,7 @@ class UserInstrumentsController < ApplicationController
     if current_user.user_instruments[0].nil? && @user_instrument.save
       redirect_to new_user_genre_path, notice: 'Created new instrument.'
     elsif @user_instrument.save
-      redirect_to root_path, notice: 'Created new instrument.'
+      redirect_to profile_path(current_user), notice: 'Created new instrument.'
     else
       render :new
     end
