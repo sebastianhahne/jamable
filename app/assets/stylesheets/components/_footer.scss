@@ -4,7 +4,7 @@
   bottom: -1px;
   height: 60px;
   width: 100vw;
-  background: $white;
+  background: $ddblue;
   display: flex;
   justify-content: space-between;
 }
@@ -17,10 +17,10 @@
 }
 
 .footer-links a {
-  color: $dblue;
-  // opacity: 0.5;
+  color: $white;
+  opacity: 0.5;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 20px;
   padding: 0px 10px;
 }
 
@@ -28,15 +28,15 @@
   flex-grow: 0;
 }
 .hamburger {
-  color: $dblue;
-  // opacity: 0.5;
+  color: $white;
+  opacity: 0.5;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 20px;
   padding: 0px 10px;
 }
 
 .dropdown-menu {
-  background: $white;
+  background: $ddblue;
   right: -24px;
   // top: -24px;
   border: none;
@@ -45,4 +45,3 @@
 .navbar {
   padding: 0px;
 }
-
