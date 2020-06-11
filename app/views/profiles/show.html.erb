@@ -3,84 +3,99 @@
   <div>
     <%= link_to '<', profiles_path, class: "back-arrow" %>
   </div>
-
-  <div class="availability-status">
-    <% if @profile == current_user && @profile.availability %>
-    <%= link_to "Available", toggle_availability_path, method: :patch, class: "button-available"%>
-    <% elsif @profile == current_user %>
-    <%= link_to "Unavailable", toggle_availability_path, method: :patch, class: "button-unavailable" %>
-    <% elsif @profile != current_user && @profile.availability %>
-    <div class="button-available"> Available</div>
-    <% else %>
-    <div class="button-unavailable"> Unavailable </div>
-    <% end %>
-  </div>
 </div>
-
-<div class="profile-wrapper">
-
-  <% if @profile != current_user %>
-    <div class="profile-buttons">
-      <% if @profile.followed_by?(current_user) %>
-        <%= link_to follow_path, method: :post do %>
-          <i class="fas fa-user-plus action-buttons"></i>
-        <% end %>
+  <div class="avail-msg-fol">
+    <div class="availability-button">
+      <% if @profile == current_user && @profile.availability %>
+      <%= link_to "Available", toggle_availability_path, method: :patch, class: "button-available-div" %>
+      <% elsif @profile == current_user %>
+      <%= link_to "Unavailable", toggle_availability_path, method: :patch, class: "button-unavailable-div" %>
+      <% elsif @profile != current_user && @profile.availability %>
+      <div class="button-available"> Available</div>
       <% else %>
-        <%= link_to follow_path, method: :post do %>
-          <i class="fas fa-user-plus action-buttons follow"></i>
-        <% end %>
+      <div class="button-unavailable"> Unavailable </div>
       <% end %>
-      <%= form_for @chatroom do |f| %>
-        <%= f.hidden_field :receiver, value: @profile.id %>
-        <%= f.hidden_field :sender, value: current_user.id %>
-        <%= f.hidden_field :name, value: "#{current_user.username} jams with #{@profile.username}" %>
-        <%= button_tag type: 'submit', class: "fas fa-comments action-buttons", id: "register-button" do %>
-          <i class="" aria-hidden="true"></i>
-        <% end %>
-      <% end %>
-
     </div>
 
-
+    <div class="follow-unfollow">
+      <% if @profile != current_user %>
+      <!-- FOLLOW BUTTON -->
+      <div class="profile-buttons">
+        <% if @profile.followed_by?(current_user) %>
+        <%= link_to follow_path, method: :post do %>
+        <div class="button-follow"> Unfollow </div>
+        <!-- <i class="fas fa-user-plus action-buttons"></i> -->
+        <% end %>
+        <% else %>
+        <%= link_to follow_path, method: :post do %>
+        <div class="button-unfollow"> Follow </div>
+        <!-- <i class="fas fa-user-plus action-buttons follow"></i> -->
+        <% end %>
+        <% end %>
+      </div>
+    </div>
+    <div class="message-button">
+      <!-- CHAT BUTTON -->
+      <%= form_for @chatroom do |f| %>
+      <%= f.hidden_field :receiver, value: @profile.id %>
+      <%= f.hidden_field :sender, value: current_user.id %>
+      <%= f.hidden_field :name, value: "#{current_user.username} jams with #{@profile.username}" %>
+      <%= button_tag type: 'submit', value: "Message", class: "button-message", id: "register-button" do %>
+      <p>Message</p>
+      <!-- <i class="" aria-hidden="true"></i> -->
+      <% end %>
+      <% end %>
+    </div>
+    <% end %>
   </div>
-  <% end %>
 
-  <div class="profile-info row margin-fix">
-    <div class="name-location col-6">
+<div class="info-wrapper">
+
+  <div class="profile-info">
+    <div class="name-location">
       <h5> <%= @profile.username %></h5>
       <% address = @profile.address.split(',') %>
       <p class="body-text"> <%= address[-3] %></p>
     </div>
-    <div class="col-6">
-      <p>Followers: <%= @profile.followers(User).count %></p>
-      <p>Follows: <%= @profile.followees(User).count %></p>
+    <div class="fol-fol">
+      <div class="followers">
+        <%= @profile.followers(User).count %> <p class="body-text">Followers</p>
+      </div>
+      <div class="following">
+        <%= @profile.followees(User).count %> <p class="body-text"> Following </p>
+      </div>
     </div>
   </div>
 
-  <div class="profile-info row margin-fix">
-    <div class="col-6">
+  <!-- INSTRUMENTS AND GENRES -->
+  <div class="instrument-genre">
+    <div class="instrument-genre-instrument">
       <p> Instruments: </p>
       <% @profile.user_instruments.each do |instrument| %>
-      <p class="body-text"> <%= instrument.instrument.name %> </p>
+      <p class="body-text"> <%= instrument.instrument.name %> (<%= instrument.skill_level %>) </p>
       <% end %>
     </div>
-    <div class="col-6">
+    <div class="instrument-genre-genre">
       <p> Genres: </p>
       <% @profile.user_genres.each do |genre| %>
-      <p class="body-text"> <%= genre.genre.name %> </p>
+      <p class="body-text genre-tag"> <%= genre.genre.name %> </p>
       <% end %>
     </div>
   </div>
-<br>
-<div class="feed-wrapper">
+  <!-- --------------------- -->
+</div>
 
 
-<% if @profile == current_user %>
-  <div class="post-button">
+<!-- USER POSTS------ -->
+
+<div class="user-posts">
+  <% if @profile == current_user %>
+  <div class="post-button-profile">
+
     <%= link_to '', new_post_path, class: "fas fa-plus-circle" %>
   </div>
-<% end %>
-   <% @profile.posts.sort {|a, b| b <=> a}.each do |post| %>
+  <% end %>
+  <% @profile.posts.sort {|a, b| b <=> a}.each do |post| %>
   <div class="post-content">
     <div class="post-header">
       <%= cl_image_tag post.user.photo.key, height: 100, width: 100, crop: :fill, class: 'avatar-small user-image' %>
@@ -90,12 +105,12 @@
     </div>
     <div class="post-media">
       <% if post.mediafiles != nil && post.mediafiles != "" %>
-        <% youtube_id = YouTubeAddy.extract_video_id(post.mediafiles) %>
-        <% url = "https://www.youtube.com/embed/#{youtube_id}" %>
-        <iframe class="post-image lozad" width="100%" data-src="<%= url %>?rel=0&modestbranding=0&autohide=1&showinfo=0&controls=1" frameborder ="0" allowfullscreen></iframe>
+      <% youtube_id = YouTubeAddy.extract_video_id(post.mediafiles) %>
+      <% url = "https://www.youtube.com/embed/#{youtube_id}" %>
+      <iframe class="post-image lozad" width="100%" data-src="<%= url %>?rel=0&modestbranding=0&autohide=1&showinfo=0&controls=1" frameborder ="0" allowfullscreen></iframe>
       <%end %>
       <% post.pictures.each do |p| %>
-        <%= cl_image_tag p.key, width: 372, class: 'post-image'  %>
+      <%= cl_image_tag p.key, width: 372, class: 'post-image'  %>
       <% end %>
       <div class="caption">
         <p><%= post.caption %></p>
@@ -104,6 +119,7 @@
     <div class="post-footer">
       <div class="like-buttons">
         <% if post.liked_by?(current_user) %>
+
           <%= link_to "/profiles/#{post.user.id}/posts/#{post.id}/like", method: :post, remote: true do %>
             <i class="fas fa-heart buttons"></i>
           <% end %>
@@ -119,11 +135,5 @@
   </div>
   <% end %>
 </div>
+</div>
 
-<!-- <script>
-  // const toggleAvailability
-  const checkbox = document.getElementById("availability-toggle");
-  checkbox.addEventListener("click", (event) => {
-    available();
-  });
-</script> -->
