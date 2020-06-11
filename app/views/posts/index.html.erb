@@ -33,11 +33,11 @@
     <div class="post-footer">
       <div class="like-buttons">
         <% if post.liked_by?(current_user) %>
-        <%= link_to like_path(post), method: :post do %>
+        <%= link_to like_path(post), method: :post, remote: true do %>
         <i class="fas fa-heart buttons"></i>
         <% end %>
         <% else %>
-        <%= link_to like_path(post), method: :post do %>
+        <%= link_to like_path(post), method: :post, remote: true do %>
         <i class="far fa-heart buttons"></i>
         <% end %>
         <% end %>
@@ -46,15 +46,7 @@
     </div>
 
   </div>
-  <% end %>
-</body>
 
-<script>
-  $(document).on('turbolinks:load', function () {
-    $("iframe").lozad();
-  });
-  $('document').ready(function(){
-    $("iframe").lozad();
-  });
-</script>
+  <% end%>
+
 </div>

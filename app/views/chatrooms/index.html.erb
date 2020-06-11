@@ -5,7 +5,7 @@
 </div>
 
 <div class="chatwrapper">
-  <% @chatrooms.each do |chatroom| %>
+  <% @chatrooms.sort {|a, b| b <=> a}.each do |chatroom| %>
 
     <% if chatroom.sender == current_user.id || chatroom.receiver == current_user.id %>
       <div id="chatroom-index">

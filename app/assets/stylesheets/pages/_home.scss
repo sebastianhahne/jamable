@@ -16,3 +16,9 @@ body {
   height: 60px;
   opacity: 0;
 }
+
+a:hover {
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+}

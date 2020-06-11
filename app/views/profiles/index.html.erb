@@ -10,19 +10,18 @@
   <h2>Found <%= @profiles.count %> profiles</h2>
 
   <% @profiles.each do |profile| %>
-
-  <div class="profile-card">
-    <div class="image">
-      <%= cl_image_tag profile.photo.key, height: 120, width: 120, crop: :fill, class: 'avatar-large' %>
+    <div class="profile-card">
+      <div class="image">
+        <%= cl_image_tag profile.photo.key, height: 120, width: 120, crop: :fill, class: 'avatar-large' %>
+      </div>
+      <div class="row">
+        <div class="profile-details col-12">
+          <p><strong><%= profile.username %></strong></p>
+            <p class="font-fix"><strong>Plays:</strong> <%= profile.user_instruments[0].instrument.name %> <br> (<%= profile.user_instruments[0].skill_level %>) <br><br><strong>Genre:</strong> <%= profile.user_genres[0].genre.name %> </p>
+        </div>
+        <%= link_to '>', profile_path(profile), class: "forward-arrow col-3" %>
+      </div>
     </div>
-    <div class="row">
-    <div class="profile-details col-12">
-     <p><strong><%= profile.username %></strong></p>
-     <p class="font-fix"> <%= profile.user_instruments[0].instrument.name %> <br> <%= profile.user_genres[0].genre.name %> </p>
-   </div>
-   <%= link_to '>', profile_path(profile), class: "forward-arrow col-3" %>
- </div>
- </div>
  <% end %>
 
 </div>

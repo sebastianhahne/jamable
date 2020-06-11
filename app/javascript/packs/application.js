@@ -34,15 +34,14 @@ import "places.js";
 // Internal imports, e.g:
 import { initChatroomCable } from '../channels/chatroom_channel';
 import { initSelect2 } from '../components/init_select2';
+import { ajaxLikes } from '../components/ajax_likes';
 
 document.addEventListener('turbolinks:load', () => {
   initChatroomCable();
   initSelect2();
-
+  ajaxLikes();
   const observer = lozad(); // lazy loads elements with default selector as '.lozad'
   observer.observe();
-
-
 });
 
 
