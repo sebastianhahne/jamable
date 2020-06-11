@@ -79,7 +79,6 @@
     <%= link_to '', new_post_path, class: "fas fa-plus-circle" %>
   </div>
 <% end %>
-  <p>What's been happening...</p>
    <% @profile.posts.sort {|a, b| b <=> a}.each do |post| %>
   <div class="post-content">
     <div class="post-header">
