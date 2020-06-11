@@ -1,5 +1,4 @@
 class ChatroomsController < ApplicationController
-
   def show
     @chatroom = Chatroom.find(params[:id])
     @message = Message.new
@@ -8,10 +7,6 @@ class ChatroomsController < ApplicationController
   def index
     @chatrooms = Chatroom.all
   end
-
-  # def new
-  #   @chatroom = Chatroom.new
-  # end
 
   def create
     @chatroom = Chatroom.new(chatroom_params)
@@ -31,8 +26,7 @@ class ChatroomsController < ApplicationController
   def chatroom_exists?
     condition1 = Chatroom.find_by(sender: @chatroom.sender, receiver: @chatroom.receiver)
     condition2 = Chatroom.find_by(sender: @chatroom.receiver, receiver: @chatroom.sender)
-    condition1.nil? || condition2.nil? ? false : true
-
+    condition1.nil? && condition2.nil? ? false : true
   end
 
   def find_chatroom
@@ -43,5 +37,4 @@ class ChatroomsController < ApplicationController
   def chatroom_params
     params.require(:chatroom).permit(:name, :receiver, :sender)
   end
-
 end
