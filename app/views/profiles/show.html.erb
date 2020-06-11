@@ -74,6 +74,7 @@
 <br>
 <div class="feed-wrapper">
 
+
 <% if @profile == current_user %>
   <div class="post-button">
     <%= link_to '', new_post_path, class: "fas fa-plus-circle" %>
@@ -103,11 +104,11 @@
     <div class="post-footer">
       <div class="like-buttons">
         <% if post.liked_by?(current_user) %>
-          <%= link_to "/profiles/#{post.user.id}/posts/#{post.id}/like", method: :post do %>
+          <%= link_to "/profiles/#{post.user.id}/posts/#{post.id}/like", method: :post, remote: true do %>
             <i class="fas fa-heart buttons"></i>
           <% end %>
         <% else %>
-          <%= link_to "/profiles/#{post.user.id}/posts/#{post.id}/like", method: :post do %>
+          <%= link_to "/profiles/#{post.user.id}/posts/#{post.id}/like", method: :post, remote: true do %>
             <i class="far fa-heart buttons"></i>
           <% end %>
         <% end %>
