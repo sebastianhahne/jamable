@@ -4,9 +4,12 @@
     <%= link_to '<', profiles_path, class: "back-arrow" %>
   </div>
 
-  <div class="availability-status">
+</div>
+<div class="info-wrapper">
+<div class="avail-msg-fol">
+  <div class="availability">
     <% if @profile == current_user && @profile.availability %>
-    <%= link_to "Available", toggle_availability_path, method: :patch, class: "button-available"%>
+    <%= link_to "Available", toggle_availability_path, method: :patch, class: "button-available" %>
     <% elsif @profile == current_user %>
     <%= link_to "Unavailable", toggle_availability_path, method: :patch, class: "button-unavailable" %>
     <% elsif @profile != current_user && @profile.availability %>
@@ -15,35 +18,42 @@
     <div class="button-unavailable"> Unavailable </div>
     <% end %>
   </div>
-</div>
 
-<div class="profile-wrapper">
-
+  <div class="follow-unfollow">
   <% if @profile != current_user %>
+  <!-- FOLLOW BUTTON -->
     <div class="profile-buttons">
       <% if @profile.followed_by?(current_user) %>
         <%= link_to follow_path, method: :post do %>
-          <i class="fas fa-user-plus action-buttons"></i>
+          <div class="button-follow"> Follow </div>
+          <!-- <i class="fas fa-user-plus action-buttons"></i> -->
         <% end %>
       <% else %>
         <%= link_to follow_path, method: :post do %>
-          <i class="fas fa-user-plus action-buttons follow"></i>
+        <div class="button-unfollow"> Unfollow </div>
+          <!-- <i class="fas fa-user-plus action-buttons follow"></i> -->
         <% end %>
       <% end %>
+    </div>
+  </div>
+  <div class="message-button">
+      <!-- CHAT BUTTON -->
       <%= form_for @chatroom do |f| %>
         <%= f.hidden_field :receiver, value: @profile.id %>
         <%= f.hidden_field :sender, value: current_user.id %>
         <%= f.hidden_field :name, value: "#{current_user.username} jams with #{@profile.username}" %>
-        <%= button_tag type: 'submit', class: "fas fa-comments action-buttons", id: "register-button" do %>
-          <i class="" aria-hidden="true"></i>
+        <%= button_tag type: 'submit', value: "Message", class: "button-message", id: "register-button" do %>
+        <p>Message</p>
+          <!-- <i class="" aria-hidden="true"></i> -->
         <% end %>
       <% end %>
-
     </div>
-
-
-  </div>
   <% end %>
+  </div>
+
+
+
+
 
   <div class="profile-info row margin-fix">
     <div class="name-location col-6">
@@ -57,6 +67,10 @@
     </div>
   </div>
 
+
+
+
+<!-- INSTRUMENTS AND GENRES -->
   <div class="profile-info row margin-fix">
     <div class="col-6">
       <p> Instruments: </p>
@@ -71,9 +85,14 @@
       <% end %>
     </div>
   </div>
-<br>
-<div class="feed-wrapper">
+<!-- --------------------- -->
 
+</div>
+
+
+<!-- USER POSTS------ -->
+
+<div class="user-posts">
 <% if @profile == current_user %>
   <div class="post-button">
     <%= link_to '', new_post_path, class: "fas fa-plus-circle" %>
@@ -118,7 +137,7 @@
   </div>
   <% end %>
 </div>
-
+  </div>
 <!-- <script>
   // const toggleAvailability
   const checkbox = document.getElementById("availability-toggle");

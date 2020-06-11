@@ -4,10 +4,10 @@
   object-fit: cover;
 }
 
-.profile-wrapper {
+.info-wrapper {
   width: 90vw;
   margin: auto;
-  margin-top: 24px;
+  margin-top: 16px;
   position: relative;
 }
 
@@ -17,32 +17,9 @@
   margin-bottom: 4px;
 }
 
-.media-containers {
+.profile-buttons {
   display: flex;
   justify-content: space-between;
-}
-
-.media-box {
-  width: 31%;
-  height: 60px;
-  border: $white 1px solid;
-  border-radius: 8px 8px 8px 8px;
-  font-size: 64px;
-  text-align: center;
-  position: relative;
-}
-
-.fa-soundcloud {
-  // margin-top: -4px;
-  position: absolute;
-  right: 16px;
-  top: -2px;
-}
-.profile-buttons {
-  position: absolute;
-  z-index: 999;
-  right: -2px;
-  top: -6px;
 }
 
 .action-buttons {
@@ -88,18 +65,13 @@
   left: 12px;
 }
 
-#new_chatroom {
-  padding-top: 4px;
-}
-
 .button-available {
-  position: absolute;
-  bottom: 12px;
-  left: 12px;
+  width: 28vw;
+  height: 28px;
   background-color: #5cd65c;
   color: white;
   border-radius: 4px;
-  padding: 4px 8px;
+  // padding: 4px 8px;
   &:hover {
     color: white;
     text-decoration: none;
@@ -107,14 +79,16 @@
 }
 
 .button-unavailable {
-  position: absolute;
-  bottom: 12px;
-  left: 12px;
+  // position: absolute;
+  // bottom: 12px;
+  // left: 12px;
+  width: 28vw;
+  height: 28px;
   background-color: transparent;
   border: #d83836 1px solid;
   color: #d83836;
   border-radius: 4px;
-  padding: 4px 8px;
+  // padding: 4px 8px;
   text-decoration: none;
   &:hover {
     color: #d83836;
@@ -125,4 +99,60 @@
 .margin-fix {
   margin-right: 0;
   margin-left: 0;
+}
+
+.avail-msg-fol {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-follow {
+  width: 28vw;
+  height: 28px;
+  // margin: 0px 4px;
+  background-color: transparent;
+  color: #5cd65c;
+  border: 1px solid #5cd65c;
+  border-radius: 4px;
+  padding: 4px 8px;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.button-unfollow {
+  width: 28vw;
+  height: 28px;
+  // margin: 0px 4px;
+  background-color: transparent;
+  color: $red;
+  border: 1px solid $red;
+  border-radius: 4px;
+  padding: 4px 8px;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.button-message {
+  width: 28vw;
+  // margin: 0px 4px;
+  height: 28px;
+  background-color: transparent;
+  color: $red;
+  border: 1px solid $red;
+  border-radius: 4px;
+  padding: 4px 8px;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.user-posts {
+  width: 90vw;
+  margin: auto;
+  padding-top: 16px;
 }
