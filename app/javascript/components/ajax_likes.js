@@ -5,10 +5,7 @@ const ajaxLikes = () => {
       const liked = like.querySelector('i');
       liked.classList.toggle('fas');
       liked.classList.toggle('far');
-      // const likeState = liked
       const likeState = liked.classList.contains('fas')
-      // if (likeState) {liked.classlist.o}
-      // console.log(liked.classList);
       const likeCount= like.querySelector('p');
 
       let count = Number(likeCount.innerText)
