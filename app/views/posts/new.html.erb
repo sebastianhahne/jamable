@@ -1,12 +1,18 @@
+  <div class="topbar">
+    <div class="topbar-content-messages">
+    <h3>New post</h3>
+    </div>
+  </div>
+
   <div class="container-signup">
 
     <%= simple_form_for @post do |f| %>
       <div class="signup-wrapper">
-        <h2>New post</h2>
+<!--         <h2>New post</h2> -->
         <%= f.input :pictures, as: :file, input_html: {multiple: true} %>
         <%= f.input :mediafiles, as: :text, input_html: {rows: 1}, placeholder: "optional YouTube link" %>
         <%= f.input :caption, as: :text, input_html: {rows: 10}, placeholder: "Add a caption" %>
-        <%= f.button :submit, "Create post", class: "login-button" %>
+        <%= f.button :submit, "Create post", class: "login-button w-100" %>
       </div>
     <% end %>
 
