@@ -13,7 +13,7 @@
           <%= cl_image_tag User.find(chatroom.receiver).photo.key, height: 100, width: 100, crop: :fill, class: 'avatar-small' %>
         </div >
         <div class= "chatlink">
-          <strong><%= link_to chatroom.name, chatroom_path(chatroom), class: "chat-list" %></strong>
+          <%= link_to chatroom.name, chatroom_path(chatroom), class: "chat-list" %>
           <% if chatroom.messages.last.nil? %>
             <div class="row chatbox">
               No messages yet...
