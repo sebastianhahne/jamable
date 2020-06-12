@@ -45,8 +45,8 @@ puts 'Cloning users'
     new_user.save!
     user_genre = UserGenre.new
     user_genre.user = new_user
-    banana = "Psychadelic Rock"
-    user_genre.genre = Genre.find_by(name: banana)
+    banana = genres_array.sample
+    user_genre.genre = Genre.find_by(name: "Psychedelic Rock")
     user_genre.save!
 
     user_instrument = UserInstrument.new
