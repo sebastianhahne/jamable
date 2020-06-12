@@ -45,7 +45,7 @@ puts 'Cloning users'
     new_user.save!
     user_genre = UserGenre.new
     user_genre.user = new_user
-    banana = genres_array.sample
+    banana = "Psychadelic Rock"
     user_genre.genre = Genre.find_by(name: banana)
     user_genre.save!
 
@@ -153,8 +153,8 @@ puts 'Cloning users'
     file = URI.open('app/assets/images/users/andy.png')
     new_user = User.new do |u|
       u.email = "andy@jamable.com"
-      u.password = "123456"
-      u.password_confirmation = "123456"
+      u.password = "abcdef"
+      u.password_confirmation = "abcdef"
       u.address = "Rudi-Dutschke-Straße 26, Berlin, Berlin, Deutschland"
       u.username = "Andy"
       u.photo.attach(io: file, filename: 'andy.png', content_type: 'image/png')
@@ -182,8 +182,8 @@ puts 'Cloning users'
       file = URI.open('app/assets/images/users/carina.jpeg')
       new_user = User.new do |u|
         u.email = "carina@jamable.com"
-        u.password = "123456"
-        u.password_confirmation = "123456"
+        u.password = "abcdef"
+        u.password_confirmation = "abcdef"
         u.address = "Rudi-Dutschke-Straße 26, Berlin, Berlin, Deutschland"
         u.username = "Carina"
         u.photo.attach(io: file, filename: 'carina.jpeg', content_type: 'image/jpeg')
@@ -211,8 +211,8 @@ puts 'Cloning users'
         file = URI.open('app/assets/images/users/clement.jpeg')
         new_user = User.new do |u|
           u.email = "clement@jamable.com"
-          u.password = "123456"
-          u.password_confirmation = "123456"
+          u.password = "abcdef"
+          u.password_confirmation = "abcdef"
           u.address = "Rudi-Dutschke-Straße 26, Berlin, Berlin, Deutschland"
           u.username = "Clement"
           u.photo.attach(io: file, filename: 'clement.jpeg', content_type: 'image/jpeg')
@@ -240,8 +240,8 @@ puts 'Cloning users'
           file = URI.open('app/assets/images/users/felix.jpeg')
           new_user = User.new do |u|
             u.email = "felix@jamable.com"
-            u.password = "123456"
-            u.password_confirmation = "123456"
+            u.password = "abcdef"
+            u.password_confirmation = "abcdef"
             u.address = "Rudi-Dutschke-Straße 26, Berlin, Berlin, Deutschland"
             u.username = "Felix"
             u.photo.attach(io: file, filename: 'felix.jpeg', content_type: 'image/jpeg')
@@ -269,8 +269,8 @@ puts 'Cloning users'
           file = URI.open('app/assets/images/users/stefan.png')
           new_user = User.new do |u|
             u.email = "stefan@jamable.com"
-            u.password = "123456"
-            u.password_confirmation = "123456"
+            u.password = "abcdef"
+            u.password_confirmation = "abcdef"
             u.address = "Rudi-Dutschke-Straße 26, Berlin, Berlin, Deutschland"
             u.username = "Stefan"
             u.photo.attach(io: file, filename: 'stefan.png', content_type: 'image/png')
@@ -298,8 +298,8 @@ puts 'Cloning users'
           file = URI.open('app/assets/images/users/jorge.jpeg')
           new_user = User.new do |u|
             u.email = "jorge@jamable.com"
-            u.password = "123456"
-            u.password_confirmation = "123456"
+            u.password = "abcdef"
+            u.password_confirmation = "abcdef"
             u.address = "Rudi-Dutschke-Straße 26, Berlin, Berlin, Deutschland"
             u.username = "Jorge"
             u.photo.attach(io: file, filename: 'jorge.jpeg', content_type: 'image/jpeg')
@@ -327,8 +327,8 @@ puts 'Cloning users'
           file = URI.open('app/assets/images/users/leo.jpeg')
           new_user = User.new do |u|
             u.email = "leo@jamable.com"
-            u.password = "123456"
-            u.password_confirmation = "123456"
+            u.password = "abcdef"
+            u.password_confirmation = "abcdef"
             u.address = "Rudi-Dutschke-Straße 26, Berlin, Berlin, Deutschland"
             u.username = "Leo"
             u.photo.attach(io: file, filename: 'leo.jpeg', content_type: 'image/jpeg')
@@ -357,8 +357,8 @@ puts 'Cloning users'
           file = URI.open('app/assets/images/users/leon.jpeg')
           new_user = User.new do |u|
             u.email = "leon@jamable.com"
-            u.password = "123456"
-            u.password_confirmation = "123456"
+            u.password = "abcdef"
+            u.password_confirmation = "abcdef"
             u.address = "Rudi-Dutschke-Straße 26, Berlin, Berlin, Deutschland"
             u.username = "Leon"
             u.photo.attach(io: file, filename: 'leon.jpeg', content_type: 'image/jpeg')
@@ -386,8 +386,8 @@ puts 'Cloning users'
           file = URI.open('app/assets/images/users/leon_k.jpeg')
           new_user = User.new do |u|
             u.email = "leon_k@jamable.com"
-            u.password = "123456"
-            u.password_confirmation = "123456"
+            u.password = "abcdef"
+            u.password_confirmation = "abcdef"
             u.address = "Rudi-Dutschke-Straße 26, Berlin, Berlin, Deutschland"
             u.username = "Leon_k"
             u.photo.attach(io: file, filename: 'leon_k.jpeg', content_type: 'image/jpeg')
@@ -415,8 +415,8 @@ puts 'Cloning users'
           file = URI.open('app/assets/images/users/max.png')
           new_user = User.new do |u|
             u.email = "max@jamable.com"
-            u.password = "123456"
-            u.password_confirmation = "123456"
+            u.password = "abcdef"
+            u.password_confirmation = "abcdef"
             u.address = "Rudi-Dutschke-Straße 26, Berlin, Berlin, Deutschland"
             u.username = "Max"
             u.photo.attach(io: file, filename: 'max.png', content_type: 'image/png')
@@ -444,8 +444,8 @@ puts 'Cloning users'
           file = URI.open('app/assets/images/users/matt.jpeg')
           new_user = User.new do |u|
             u.email = "matt@jamable.com"
-            u.password = "123456"
-            u.password_confirmation = "123456"
+            u.password = "abcdef"
+            u.password_confirmation = "abcdef"
             u.address = "Rudi-Dutschke-Straße 26, Berlin, Berlin, Deutschland"
             u.username = "Matt"
             u.photo.attach(io: file, filename: 'matt.jpeg', content_type: 'image/jpeg')
@@ -473,8 +473,8 @@ puts 'Cloning users'
           file = URI.open('app/assets/images/users/monti.jpeg')
           new_user = User.new do |u|
             u.email = "monti@jamable.com"
-            u.password = "123456"
-            u.password_confirmation = "123456"
+            u.password = "abcdef"
+            u.password_confirmation = "abcdef"
             u.address = "Rudi-Dutschke-Straße 26, Berlin, Berlin, Deutschland"
             u.username = "monti"
             u.photo.attach(io: file, filename: 'monti.jpeg', content_type: 'image/jpeg')
@@ -502,8 +502,8 @@ puts 'Cloning users'
             file = URI.open('app/assets/images/users/yann.png')
             new_user = User.new do |u|
               u.email = "yann@jamable.com"
-              u.password = "123456"
-              u.password_confirmation = "123456"
+              u.password = "abcdef"
+              u.password_confirmation = "abcdef"
               u.address = "Rudi-Dutschke-Straße 26, Berlin, Berlin, Deutschland"
               u.username = "Yann"
               u.photo.attach(io: file, filename: 'yann.png', content_type: 'image/png')
@@ -531,8 +531,8 @@ puts 'Cloning users'
           file = URI.open('app/assets/images/users/santi.jpeg')
           new_user = User.new do |u|
             u.email = "santi@jamable.com"
-            u.password = "123456"
-            u.password_confirmation = "123456"
+            u.password = "abcdef"
+            u.password_confirmation = "abcdef"
             u.address = "somewhere in Berlin"
             u.username = "santi"
             u.photo.attach(io: file, filename: 'santi.jpeg', content_type: 'image/jpeg')
@@ -560,8 +560,8 @@ puts 'Cloning users'
           file = URI.open('app/assets/images/users/enno.png')
           new_user = User.new do |u|
             u.email = "enno@jamable.com"
-            u.password = "123456"
-            u.password_confirmation = "123456"
+            u.password = "abcdef"
+            u.password_confirmation = "abcdef"
             u.address = "Rudi-Dutschke-Straße 26, Berlin, Berlin, Deutschland"
             u.username = "Enno"
             u.photo.attach(io: file, filename: 'enno.png', content_type: 'image/png')
@@ -589,8 +589,8 @@ puts 'Cloning users'
           file = URI.open('app/assets/images/users/valerie.jpeg')
           new_user = User.new do |u|
             u.email = "valerie@jamable.com"
-            u.password = "123456"
-            u.password_confirmation = "123456"
+            u.password = "abcdef"
+            u.password_confirmation = "abcdef"
             u.address = "somewhere in Berlin"
             u.username = "valerie"
             u.photo.attach(io: file, filename: 'valerie.jpeg', content_type: 'image/jpeg')
