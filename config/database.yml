@@ -78,8 +78,20 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+
 production:
   <<: *default
-  database: jamable_production
-  username: jamable
-  password: <%= ENV['JAMABLE_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  host: <%= ENV.fetch('DATABASE_HOST') %>
+  port: <%= ENV.fetch('DATABASE_PORT') %>
+  username: <%= ENV.fetch('DATABASE_USERNAME') %>
+  password: <%= ENV.fetch('DATABASE_PASSWORD') %>
+
+
+# OLD CONFIG BEFORE DOCKER
+
+# production:
+#   <<: *default
+#   database: jamable_production
+#   username: jamable
+#   password: <%= ENV['JAMABLE_DATABASE_PASSWORD'] %>

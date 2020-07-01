@@ -81,3 +81,8 @@ gem "socialization"
 # geocoder for addresses
 gem 'geocoder'
 
+# DOCKER CONFIG FROM HERE
+
+# group :production do
+#   gem 'pg'
+# end
