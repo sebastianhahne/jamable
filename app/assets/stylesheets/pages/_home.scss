@@ -2,7 +2,7 @@ html {
   background-color: $dblue;
 }
 body {
-  background-color: $dblue !important;
+  background-color: $dblue;
 }
 .wrapper {
   background-color: $dblue;
@@ -23,9 +23,18 @@ a:hover {
     outline: none;
 }
 
-@media(min-width: 400px) {
+@media(min-width: 420px) {
+  body {
+    background-color: rgba(18,18,18,1);
+  }
+
+  html {
+    background-color: rgba(18,18,18,1);
+  }
+
   .wrapper {
     width: 420px;
+    height: 100%;
     margin: 0 auto;
   }
 
@@ -40,11 +49,14 @@ a:hover {
     margin: 0 auto;
   }
 
+  .apple {
+    margin-left: 52px;
+  }
+
   // FOOTER
   .footer {
   width: 420px;
-  margin-left: auto !important;
-  margin-right: auto !important;
+  left: calc(50% - 210px);
   }
 
   // SIGN IN PAGE
@@ -64,6 +76,7 @@ a:hover {
     width: 378px !important; /* 90% x 420 */
     margin-left: auto !important;
     margin-right: auto !important;
+    margin-top: 60px !important;
   }
 
   // PROFILES SHOW
