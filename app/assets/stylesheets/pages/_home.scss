@@ -2,7 +2,7 @@ html {
   background-color: $dblue;
 }
 body {
-  background-color: $dblue !important;
+  background-color: $dblue;
 }
 .wrapper {
   background-color: $dblue;
@@ -22,3 +22,126 @@ a:hover {
     color: inherit;
     outline: none;
 }
+
+@media(min-width: 420px) {
+  body {
+    background-color: rgba(18,18,18,1);
+  }
+
+  html {
+    background-color: rgba(18,18,18,1);
+  }
+
+  .wrapper {
+    width: 420px;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  // TOPBAR
+  .topbar {
+  width: 420px;
+  margin: 0 auto;
+  }
+
+  .topbar-content {
+    width: 378px; /* 90% x 420 */
+    margin: 0 auto;
+  }
+
+  .apple {
+    margin-left: 52px;
+  }
+
+  // FOOTER
+  .footer {
+  width: 420px;
+  left: calc(50% - 210px);
+  }
+
+  // SIGN IN PAGE
+  .width-form {
+    width: 357px; /* 85% x 420 */
+  }
+
+  // POSTS INDEX
+  .feed-wrapper {
+    width: 378px !important; /* 90% x 420 */
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  // PROFILES INDEX
+  .search-profiles-wrapper {
+    width: 378px !important; /* 90% x 420 */
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 60px !important;
+  }
+
+  // PROFILES SHOW
+  .button-available-div {
+    width: 105px !important;
+  }
+
+  .button-unavailable-div {
+    width: 105px !important;
+  }
+
+  .profile-photo {
+    width: 420px !important;
+  }
+
+  .info-wrapper {
+    width: 378px !important; /* 90% x 420 */
+  }
+
+  .user-posts {
+    width: 378px !important; /* 90% x 420 */
+  }
+  .avail-msg-fol {
+   width: 378px !important; /* 90% x 420 */
+   margin-left: auto !important;
+   margin-right: auto !important;
+  }
+
+  .button-available {
+    width: 105px !important;
+  }
+
+  .button-unfollow {
+    width: 105px !important;
+  }
+
+  .button-follow {
+    width: 105px !important;
+  }
+
+  .button-message {
+    width: 105px !important;
+  }
+
+  // CHATROOMS
+  .message-bar {
+    width: 378px !important; /* 90% x 420 */
+  }
+
+  // MESSAGES
+  .topbar-content-messages {
+    width: 378px !important; /* 90% x 420 */
+  }
+
+  // NEW POST
+  .signup-wrapper {
+    width: 357px; /* 85% x 420 */
+  }
+
+  // SEARCHBAR
+
+  // ALERT
+  .alert {
+    width: 378px !important; /* 90% x 420 */
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  }
