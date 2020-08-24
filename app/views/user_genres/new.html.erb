@@ -1,8 +1,12 @@
 <div class="container-signup">
-
+  <div class="topbar">
+    <div class="topbar-content-messages">
+    <h3>Add a genre</h3>
+    </div>
+  </div>
   <%= simple_form_for @user_genre do |f| %>
     <div class="signup-wrapper">
-      <h2>Add a new genre</h2>
+
       <hr>
       <%= f.fields_for :name do |name_form| %>
 

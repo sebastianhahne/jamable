@@ -34,8 +34,9 @@ a:hover {
 
   .wrapper {
     width: 420px;
-    height: 100%;
+    // height: 100%;
     margin: 0 auto;
+    padding-top: 4px;
   }
 
   // TOPBAR
@@ -77,6 +78,7 @@ a:hover {
     width: 378px !important; /* 90% x 420 */
     margin-left: auto !important;
     margin-right: auto !important;
+    margin-top: 60px !important;
   }
 
   // PROFILES SHOW
@@ -123,7 +125,9 @@ a:hover {
 
   // CHATROOMS
   .message-bar {
-    width: 378px !important; /* 90% x 420 */
+
+    width: 420px !important;
+    left: calc(50% - 210px);
   }
 
   // MESSAGES
