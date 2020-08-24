@@ -1,6 +1,9 @@
-<div class="container">
-
-    <h1>#go jam!</h1>
+<!-- <div class="container"> -->
+  <div class="topbar">
+    <div class="topbar-content-messages">
+    <h3>#gojam</h3>
+    </div>
+  </div>
     <div id="messages" data-chatroom-id="<%= @chatroom.id %>">
         <% @chatroom.messages.each do |message| %>
         <% if message.user == current_user %>
@@ -16,10 +19,9 @@
         </div>
         <% end %>
     </div>
-
   <div class="message-bar">
     <%= simple_form_for [ @chatroom, @message ], remote: true do |f| %>
-    <%= f.input :content, label: false, placeholder: "#message" %>
+    <%= f.input :content, label: false %>
     <% end %>
   </div>
 </div>
